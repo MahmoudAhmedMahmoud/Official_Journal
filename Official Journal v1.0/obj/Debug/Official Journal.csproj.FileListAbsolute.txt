@@ -1,0 +1,102 @@
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\Official Journal.exe.config
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\Official Journal.exe
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\Official Journal.pdb
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Data.Desktop.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Data.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Printing.v21.2.Core.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Utils.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraEditors.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraGrid.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraLayout.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraBars.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Office.v21.2.Core.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Data.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Printing.v21.2.Core.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Utils.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraEditors.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraGrid.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraLayout.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraPrinting.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraBars.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.RichEdit.v21.2.Core.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.XtraTreeList.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.Office.v21.2.Core.xml
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Utils.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Utils.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Utils.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraGrid.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraGrid.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraGrid.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraGrid.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraPrinting.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraPrinting.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraPrinting.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraPrinting.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Sparkline.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraBars.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraBars.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraBars.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraBars.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.RichEdit.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.RichEdit.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.RichEdit.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.RichEdit.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.XtraTreeList.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.XtraTreeList.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.XtraTreeList.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.XtraTreeList.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\de\DevExpress.Office.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.csproj.AssemblyReference.cache
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_AddIssue.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.Properties.Resources.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.csproj.GenerateResource.cache
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.exe.licenses
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.csproj.CoreCompileInputs.cache
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official.4E0C6243.Up2Date
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.exe
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official Journal.pdb
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_SearchAll.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_Add_Department.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_Add_IssuingAuthorities.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_Main.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_UserLogin.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_Cn.resources
+E:\Work\Multimedia Dep\Official Journal\obj\Debug\Official_Journal.frm_User_SuperAdmin.resources
+E:\Work\Multimedia Dep\Official Journal\bin\Debug\DevExpress.BonusSkins.v21.2.dll
