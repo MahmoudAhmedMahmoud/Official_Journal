@@ -43,8 +43,6 @@ namespace Official_Journal
                 }
        }
 
-
-
         //------------------------- Btns ----------------------------
 
         private void frm_Main_FormClosed(object sender, FormClosedEventArgs e)
@@ -63,22 +61,22 @@ namespace Official_Journal
             {
                 btn_frmUser.Enabled = false;
             }
-
+            StaticItem_User.Caption = Properties.Settings.Default.UserName;
         }
 
         private void btn_frmUser_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var Open_frm = Application.OpenForms["frm_User_SuperAdmin"] as frm_User_SuperAdmin;
+            var Open_frm = Application.OpenForms["frm_Users"] as frm_Users;
             if (Open_frm == null)
             {
-                frm_User_SuperAdmin frm = new frm_User_SuperAdmin();
+                frm_Users frm = new frm_Users();
                // frm.MdiParent = this;
                 frm.BringToFront();
-                frm.Show();
+                frm.ShowDialog();
             }
             else
             {
-                frm_User_SuperAdmin frm = new frm_User_SuperAdmin();
+                frm_Users frm = new frm_Users();
                 frm.BringToFront();
             }
         }
@@ -90,7 +88,8 @@ namespace Official_Journal
             {
                 frm_Add_Department frm = new frm_Add_Department();
                 //frm.MdiParent = this;
-                frm.Show();
+                frm.ShowDialog();
+                
             }
             else
             {
@@ -106,7 +105,7 @@ namespace Official_Journal
             {
                 frm_Add_IssuingAuthorities frm = new frm_Add_IssuingAuthorities();
                // frm.MdiParent = this;
-                frm.Show();
+                frm.ShowDialog();
             }
             else
             {
@@ -121,8 +120,8 @@ namespace Official_Journal
             if (Open_frm == null)
             {
                 frm_AddIssue frm = new frm_AddIssue();
-                frm.MdiParent = this;
-                frm.Show();
+                //frm.MdiParent = this;
+                frm.ShowDialog();
             }
             else
             {
@@ -130,5 +129,6 @@ namespace Official_Journal
                 frm.BringToFront();
             }
         }
+
     }
 }

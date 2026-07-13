@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Work\\Multimedia Dep\\Official Journal\\",
+  "WorkspaceRootPath": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\frm_user_superadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_user_superadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\frm_add_issuingauthorities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_add_issuingauthorities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\cls_issues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:cls_issues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_User_SuperAdmin.cs [Design]",
-              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_User_SuperAdmin.cs",
-              "RelativeDocumentMoniker": "frm_User_SuperAdmin.cs",
-              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_User_SuperAdmin.cs [Design]*",
-              "RelativeToolTip": "frm_User_SuperAdmin.cs [Design]*",
+              "DocumentIndex": 0,
+              "Title": "frm_AddIssue.cs",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs",
+              "RelativeDocumentMoniker": "frm_AddIssue.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs*",
+              "RelativeToolTip": "frm_AddIssue.cs*",
+              "ViewState": "AgIAADYAAAAAAAAAAAAiwFAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T11:53:57.417Z",
+              "WhenOpened": "2026-07-13T11:03:31.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_AddIssue.cs [Design]",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs",
+              "RelativeDocumentMoniker": "frm_AddIssue.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs [Design]*",
+              "RelativeToolTip": "frm_AddIssue.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T10:08:08.734Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frm_Add_IssuingAuthorities.cs [Design]",
-              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Add_IssuingAuthorities.cs",
-              "RelativeDocumentMoniker": "frm_Add_IssuingAuthorities.cs",
-              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Add_IssuingAuthorities.cs [Design]*",
-              "RelativeToolTip": "frm_Add_IssuingAuthorities.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T11:49:19.412Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frm_Add_Department.cs [Design]",
-              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Add_Department.cs",
-              "RelativeDocumentMoniker": "frm_Add_Department.cs",
-              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Add_Department.cs [Design]*",
-              "RelativeToolTip": "frm_Add_Department.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T11:49:18.132Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "frm_Main.cs",
-              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Main.cs",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Main.cs",
               "RelativeDocumentMoniker": "frm_Main.cs",
-              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Main.cs*",
-              "RelativeToolTip": "frm_Main.cs*",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAawHsAAAAPAAAAAAAAAA==",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Main.cs",
+              "RelativeToolTip": "frm_Main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T10:53:10.205Z",
+              "WhenOpened": "2026-07-13T09:08:23.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frm_Main.cs [Design]",
-              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Main.cs",
-              "RelativeDocumentMoniker": "frm_Main.cs",
-              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\frm_Main.cs [Design]*",
-              "RelativeToolTip": "frm_Main.cs [Design]*",
+              "DocumentIndex": 3,
+              "Title": "cls_Issues.cs",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\cls_Issues.cs",
+              "RelativeDocumentMoniker": "cls_Issues.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\cls_Issues.cs",
+              "RelativeToolTip": "cls_Issues.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGEAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:36:35.591Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-07-13T08:48:20.225Z",
+              "EditorCaption": ""
             }
           ]
         }

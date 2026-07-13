@@ -86,6 +86,7 @@ namespace Official_Journal
         //---------------------------------- Form Load ----------------------------------
         private void frm_User_SuperAdmin_Load(object sender, EventArgs e)
         {
+            Reset();
             GetData();
             dgv_Users.Columns[0].Width = 100;
             dgv_Users.Columns[1].Width = 250;

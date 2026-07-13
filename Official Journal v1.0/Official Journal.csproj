@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cls_Issues.cs" />
     <Compile Include="cls_Message.cs" />
     <Compile Include="cls_Users.cs" />
     <Compile Include="DataAccesLayer.cs" />
@@ -87,11 +88,23 @@
     <Compile Include="frm_Cn.Designer.cs">
       <DependentUpon>frm_Cn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Search.Designer.cs">
+      <DependentUpon>frm_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SearchAll.cs">
       <SubType>Form</SubType>
@@ -104,6 +117,12 @@
     </Compile>
     <Compile Include="frm_UserLogin.Designer.cs">
       <DependentUpon>frm_UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Users.Designer.cs">
+      <DependentUpon>frm_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_User_SuperAdmin.cs">
       <SubType>Form</SubType>
@@ -125,14 +144,23 @@
     <EmbeddedResource Include="frm_Cn.resx">
       <DependentUpon>frm_Cn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Search.resx">
+      <DependentUpon>frm_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SearchAll.resx">
       <DependentUpon>frm_SearchAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_UserLogin.resx">
       <DependentUpon>frm_UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Users.resx">
+      <DependentUpon>frm_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_User_SuperAdmin.resx">
       <DependentUpon>frm_User_SuperAdmin.cs</DependentUpon>
@@ -146,6 +174,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Journal.ico" />
+    <None Include="Resources\Official_Journal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

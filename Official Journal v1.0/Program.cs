@@ -16,7 +16,7 @@ namespace Official_Journal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_UserLogin());
+            Application.Run(new frm_Login());
         }
     }
 }
