@@ -17,35 +17,144 @@ namespace Official_Journal
         {
             InitializeComponent();
         }
-        //------------------------------------ Moving Form --------------------------------
-        int X, Y;
-        int M = 0;
-        private void pnl_Head_MouseDown(object sender, MouseEventArgs e)
+        //------------------cls-------------------------
+        DataAccesLayer DAC = new DataAccesLayer();
+        cls_Message Msg = new cls_Message();
+
+        //------------------func------------------------
+        public void GetData()
         {
-            M = 1;
-            X = e.X;
-            Y = e.Y;
+            grid_Dep.DataSource = DAC.SelectQue("select [Dep_ID]'كود' ,[Dep_Name]'الجهة المعنية' ,Notes'ملاحظات' from [dbo].[tbl_Department]");
+            dgv_Dep.Columns[0].Width = 15;
         }
 
-        private void pnl_Head_MouseUp(object sender, MouseEventArgs e)
+        int Add = 0;
+
+        public void Clear()
         {
-            M = 0;
+            txt_ID.Clear();
+            txt_Dep.Clear();
+            txt_Note.Clear();
         }
 
-        private void pnl_Head_MouseMove(object sender, MouseEventArgs e)
+        public void Reset()
         {
-            var frm = Application.OpenForms["frm_Main"] as frm_Main;
-            int XX = frm.Location.X;
-            int YY = frm.Location.Y;
-            if (M == 1)
+            txt_Dep.Enabled = false;
+            txt_Note.Enabled = false;
+            grid_Dep.Enabled = true;
+            btn_New.Enabled = true;
+            btn_Edite.Enabled = false;
+            btn_Delete.Enabled = false;
+            btn_Save.Enabled = false;
+            btn_Cancel.Enabled = false;
+        }
+
+        //------------------frm load--------------------
+        private void frm_Add_Department_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+        //------------------buttons---------------------
+        private void btn_New_Click(object sender, EventArgs e)
+        {
+            Clear();
+            txt_Dep.Enabled = true;
+            txt_Note.Enabled = true;
+            grid_Dep.Enabled = false;
+            btn_New.Enabled = false;
+            btn_Edite.Enabled = false;
+            btn_Delete.Enabled = false;
+            btn_Save.Enabled = true;
+            btn_Cancel.Enabled = true;
+            Add = 0;
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            if (Add == 0)
             {
-                this.SetDesktopLocation(MousePosition.X - X - 1, MousePosition.Y - Y - 150);
+                if (txt_Dep.Text == "" )
+                {
+                    Msg.NullField();
+                }
+                else
+                {
+                    DAC.ExcQue("insert into tbl_Department ([Dep_Name],[Notes])Values(N'" + txt_Dep.Text + "',N'" + txt_Note.Text + "')");
+                    Clear();
+                    Reset();
+                    GetData();
+                    Msg.InsertMessage();
+                }
+            }
+            else
+            {
+                if (txt_ID.Text == "" || txt_Dep.Text == "" )
+                {
+                    Msg.NullField();
+                }
+                else
+                {
+                    DialogResult R;
+                    R = Msg.AskUpdateMessage();
+                    if (R == DialogResult.Yes)
+                    {
+                        DAC.ExcQue("update tbl_Department set [Dep_Name]=N'" + txt_Dep.Text + "', Notes=N'" + txt_Note.Text + "' where [Dep_ID]=N'"+txt_ID.Text+"'");
+                        Clear();
+                        Reset();
+                        GetData();
+                        Msg.Updatemessage();
+                    }
+                }
             }
         }
-        //-------------------------------------------------------------------------------------
-        private void btn_Close_Click(object sender, EventArgs e)
+
+        private void btn_Edite_Click(object sender, EventArgs e)
+        {           
+            txt_Dep.Enabled = true;
+            txt_Note.Enabled = true;
+            grid_Dep.Enabled = false;
+            btn_New.Enabled = false;
+            btn_Edite.Enabled = false;
+            btn_Delete.Enabled = false;
+            btn_Save.Enabled = true;
+            btn_Cancel.Enabled = true;
+            Add = 1;
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult R;
+            R = Msg.AskDeleteMessage();
+            if (R == DialogResult.Yes)
+            {
+                DAC.SelectQue("delete from tbl_Auth where Auth_ID=N'" + txt_ID.Text + "'");
+                Clear();
+                Reset();
+                GetData();
+                Msg.DeleteMessage();
+            }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            Clear();
+            Reset();
+        }
+
+        //-----------------Action-----------------------
+
+        private void dgv_IssueAuth_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgv_Dep.DataRowCount > 0)
+            {
+                txt_ID.Text = dgv_Dep.GetFocusedRowCellValue("كود").ToString();
+                txt_Dep.Text = dgv_Dep.GetFocusedRowCellValue("الجهة المعنية").ToString();
+                txt_Note.Text = dgv_Dep.GetFocusedRowCellValue("ملاحظات").ToString();
+                btn_Edite.Enabled = true;
+                btn_Delete.Enabled = true;
+            }
+            return;
+
         }
     }
 }

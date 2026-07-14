@@ -26,6 +26,18 @@ namespace Official_Journal
         int Add_UPd = 0;     //Add=0 , Upd=1
         byte[] IssueFile;
 
+
+        public void GetLaws()
+        {
+           grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كودالعدد]=N'"+txt_IssueID.Text+"'");
+        }
+        public void Reset()
+        {   
+            txt_IssueNo.Text = "";
+            txt_IssueID.Text = "";
+            txt_Year.Text = "";
+            txt_ID.Text = "";
+        }
         //-------------------Load---------------------------
         private void frm_AddIssue_Load(object sender, EventArgs e)
         {
@@ -42,7 +54,7 @@ namespace Official_Journal
         private void btn_SaveIssue_Click(object sender, EventArgs e)
         {
             string Desc = $"العدد:{txt_IssueNo.Text} - السنة{txt_Year.Text} - النشر: {dtp_PublishDate.Text} -الحفظ:{dtp_SaveDate.Text} ";
-            if (txt_IssueNo.Text==""||txt_Year.Text==""||txt_Path.Text==""||dtp_PublishDate.Text==""||dtp_SaveDate.Text=="")
+            if (txt_IssueNo.Text==""|| Spin_Year.Text == ""||txt_Path.Text==""||dtp_PublishDate.Text==""||dtp_SaveDate.Text=="")
             {
                 MSG.NullField();
             }
@@ -55,7 +67,16 @@ namespace Official_Journal
                     MSG.InsertMessage();
                     gb_LawDetails.Enabled = true;
                     gb_Laws.Enabled = true;
-                    
+                    GetLaws();
+                    txt_LawYear.Text=Spin_Year.Text;
+                    txt_IssueID.Enabled=false;
+                    Spin_Year.Enabled = false;
+                    dtp_PublishDate.Enabled = false;
+                    dtp_SaveDate.Enabled = false;
+                    btn_AddFile.Enabled = false;
+                    btn_EditeIssue.Enabled=false;
+                    btn_DeleteIssue.Enabled = false;
+                    btn_CancelIssue.Enabled = false;
                 }
             }
 
