@@ -32,6 +32,7 @@
             this.gb_Issue = new DevExpress.XtraEditors.GroupControl();
             this.btn_CancelIssue = new DevExpress.XtraEditors.SimpleButton();
             this.btn_DeleteIssue = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_NewIssue = new DevExpress.XtraEditors.SimpleButton();
             this.Spin_Year = new DevExpress.XtraEditors.SpinEdit();
             this.btn_SaveIssue = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SearchIssue = new DevExpress.XtraEditors.SimpleButton();
@@ -53,6 +54,7 @@
             this.grid_Law = new DevExpress.XtraGrid.GridControl();
             this.dgv_Law = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gb_LawDetails = new DevExpress.XtraEditors.GroupControl();
+            this.btn_SearchAuth = new DevExpress.XtraEditors.SimpleButton();
             this.gb_Desc = new DevExpress.XtraEditors.GroupControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.rb_N = new System.Windows.Forms.RadioButton();
@@ -79,8 +81,6 @@
             this.txt_LawYear = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txt_LawNo = new System.Windows.Forms.TextBox();
-            this.btn_SearchAuth = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_NewIssue = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gb_Issue)).BeginInit();
             this.gb_Issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spin_Year.Properties)).BeginInit();
@@ -155,6 +155,19 @@
             this.btn_DeleteIssue.TabIndex = 5;
             this.btn_DeleteIssue.TabStop = false;
             this.btn_DeleteIssue.Text = "حذف";
+            // 
+            // btn_NewIssue
+            // 
+            this.btn_NewIssue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_NewIssue.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_NewIssue.Appearance.Options.UseFont = true;
+            this.btn_NewIssue.Enabled = false;
+            this.btn_NewIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NewIssue.ImageOptions.Image")));
+            this.btn_NewIssue.Location = new System.Drawing.Point(342, 80);
+            this.btn_NewIssue.Name = "btn_NewIssue";
+            this.btn_NewIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_NewIssue.TabIndex = 6;
+            this.btn_NewIssue.Text = "جديد";
             // 
             // Spin_Year
             // 
@@ -426,6 +439,18 @@
             this.gb_LawDetails.TabIndex = 2;
             this.gb_LawDetails.Text = "بيانات القانون";
             // 
+            // btn_SearchAuth
+            // 
+            this.btn_SearchAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SearchAuth.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_SearchAuth.Appearance.Options.UseFont = true;
+            this.btn_SearchAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchAuth.ImageOptions.Image")));
+            this.btn_SearchAuth.Location = new System.Drawing.Point(49, 29);
+            this.btn_SearchAuth.Name = "btn_SearchAuth";
+            this.btn_SearchAuth.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_SearchAuth.Size = new System.Drawing.Size(23, 23);
+            this.btn_SearchAuth.TabIndex = 7;
+            // 
             // gb_Desc
             // 
             this.gb_Desc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -594,7 +619,7 @@
             this.btn_DelLawDep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_DelLawDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_DelLawDep.Appearance.Options.UseFont = true;
-            this.btn_DelLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.btn_DelLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DelLawDep.ImageOptions.Image")));
             this.btn_DelLawDep.Location = new System.Drawing.Point(13, 185);
             this.btn_DelLawDep.Name = "btn_DelLawDep";
             this.btn_DelLawDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -606,7 +631,7 @@
             this.btn_SearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_SearchDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SearchDep.Appearance.Options.UseFont = true;
-            this.btn_SearchDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton13.ImageOptions.Image")));
+            this.btn_SearchDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchDep.ImageOptions.Image")));
             this.btn_SearchDep.Location = new System.Drawing.Point(13, 24);
             this.btn_SearchDep.Name = "btn_SearchDep";
             this.btn_SearchDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -618,7 +643,7 @@
             this.btn_AddLawDep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_AddLawDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_AddLawDep.Appearance.Options.UseFont = true;
-            this.btn_AddLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btn_AddLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddLawDep.ImageOptions.Image")));
             this.btn_AddLawDep.Location = new System.Drawing.Point(36, 24);
             this.btn_AddLawDep.Name = "btn_AddLawDep";
             this.btn_AddLawDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -640,7 +665,7 @@
             this.btn_AddAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_AddAuth.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_AddAuth.Appearance.Options.UseFont = true;
-            this.btn_AddAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton12.ImageOptions.Image")));
+            this.btn_AddAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddAuth.ImageOptions.Image")));
             this.btn_AddAuth.Location = new System.Drawing.Point(77, 28);
             this.btn_AddAuth.Name = "btn_AddAuth";
             this.btn_AddAuth.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -737,31 +762,6 @@
             this.txt_LawNo.TabIndex = 0;
             this.txt_LawNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btn_SearchAuth
-            // 
-            this.btn_SearchAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_SearchAuth.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_SearchAuth.Appearance.Options.UseFont = true;
-            this.btn_SearchAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btn_SearchAuth.Location = new System.Drawing.Point(49, 29);
-            this.btn_SearchAuth.Name = "btn_SearchAuth";
-            this.btn_SearchAuth.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_SearchAuth.Size = new System.Drawing.Size(23, 23);
-            this.btn_SearchAuth.TabIndex = 7;
-            // 
-            // btn_NewIssue
-            // 
-            this.btn_NewIssue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_NewIssue.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_NewIssue.Appearance.Options.UseFont = true;
-            this.btn_NewIssue.Enabled = false;
-            this.btn_NewIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btn_NewIssue.Location = new System.Drawing.Point(342, 80);
-            this.btn_NewIssue.Name = "btn_NewIssue";
-            this.btn_NewIssue.Size = new System.Drawing.Size(60, 23);
-            this.btn_NewIssue.TabIndex = 6;
-            this.btn_NewIssue.Text = "جديد";
-            // 
             // frm_AddIssue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,8 +813,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btn_AddFile;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.SimpleButton btn_EditeIssue;
-        private DevExpress.XtraEditors.SimpleButton btn_SaveIssue;
         private System.Windows.Forms.DateTimePicker dtp_LawIssueDate;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -832,7 +830,6 @@
         private System.Windows.Forms.ComboBox cmb_Dep;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private System.Windows.Forms.TextBox txt_LawYear;
-        private DevExpress.XtraEditors.SimpleButton btn_SearchIssue;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btn_CancelLaw;
         private DevExpress.XtraEditors.SimpleButton btn_DeleteLaw;
@@ -844,8 +841,6 @@
         private System.Windows.Forms.RadioButton rb_N;
         private System.Windows.Forms.RadioButton rb_Y;
         private DevExpress.XtraEditors.SimpleButton btn_SearchDep;
-        private DevExpress.XtraEditors.SimpleButton btn_CancelIssue;
-        private DevExpress.XtraEditors.SimpleButton btn_DeleteIssue;
         public System.Windows.Forms.TextBox txt_IssueNo;
         public System.Windows.Forms.TextBox txt_Path;
         public System.Windows.Forms.TextBox txt_IssueID;
@@ -854,7 +849,12 @@
         public System.Windows.Forms.DateTimePicker dtp_SaveDate;
         public System.Windows.Forms.TextBox txt_Year;
         public System.Windows.Forms.TextBox txt_ID;
-        private DevExpress.XtraEditors.SimpleButton btn_NewIssue;
         private DevExpress.XtraEditors.SimpleButton btn_SearchAuth;
+        public DevExpress.XtraEditors.SimpleButton btn_EditeIssue;
+        public DevExpress.XtraEditors.SimpleButton btn_SaveIssue;
+        public DevExpress.XtraEditors.SimpleButton btn_SearchIssue;
+        public DevExpress.XtraEditors.SimpleButton btn_CancelIssue;
+        public DevExpress.XtraEditors.SimpleButton btn_DeleteIssue;
+        public DevExpress.XtraEditors.SimpleButton btn_NewIssue;
     }
 }

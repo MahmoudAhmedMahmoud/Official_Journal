@@ -29,7 +29,15 @@ namespace Official_Journal
 
         public void GetLaws()
         {
-           grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كودالعدد]=N'"+txt_IssueID.Text+"'");
+           grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text+"'");
+            //
+           cmb_Auth.DataSource = DAC.SelectQue("select Auth_ID,Auth_Name from tbl_Auth");
+           cmb_Auth.DisplayMember= "Auth_Name";
+           cmb_Auth.ValueMember= "Auth_ID";
+            //
+            cmb_Auth.DataSource = DAC.SelectQue("select Dep_ID,Dep_Name from tbl_Department");
+            cmb_Auth.DisplayMember = "Dep_Name";
+            cmb_Auth.ValueMember = "Dep_ID";
         }
         public void Reset()
         {   

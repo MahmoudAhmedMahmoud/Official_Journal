@@ -37,6 +37,11 @@ namespace Official_Journal
                 frm.dtp_PublishDate.Text = dgv_Search.GetFocusedRowCellValue("تاريخ النشر").ToString();
                 frm.dtp_SaveDate.Text = dgv_Search.GetFocusedRowCellValue("تاريخ الحفظ").ToString();
                 frm.txt_Path.Text = dgv_Search.GetFocusedRowCellValue("المسار").ToString();
+                frm.btn_NewIssue.Enabled = true;
+                frm.btn_SaveIssue.Enabled = false;
+                frm.btn_EditeIssue.Enabled = true;
+                frm.btn_DeleteIssue.Enabled = true;
+                frm.GetLaws();
                 this.Close();
             }
             return;
