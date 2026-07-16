@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\cls_issues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:cls_issues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_addissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "cls_Issues.cs",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\cls_Issues.cs",
+              "RelativeDocumentMoniker": "cls_Issues.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\cls_Issues.cs",
+              "RelativeToolTip": "cls_Issues.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAuwKEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-16T11:29:35.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frm_Search.cs",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Search.cs",
               "RelativeDocumentMoniker": "frm_Search.cs",
               "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Search.cs",
               "RelativeToolTip": "frm_Search.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCoAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-15T08:05:46.971Z",
               "EditorCaption": ""
@@ -55,20 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frm_AddIssue.cs",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs",
               "RelativeDocumentMoniker": "frm_AddIssue.cs",
               "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs",
               "RelativeToolTip": "frm_AddIssue.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwB8AAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAUwLwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-15T07:59:12.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "frm_AddIssue.cs [Design]",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_AddIssue.cs",
               "RelativeDocumentMoniker": "frm_AddIssue.cs",

@@ -31,11 +31,15 @@ namespace Official_Journal
             {
                 var frm = Application.OpenForms["frm_AddIssue"] as frm_AddIssue;
                 frm.txt_IssueNo.Text = dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString();
+                frm.txt_IssueNo.Enabled = false;
                 frm.txt_ID.Text = dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString();
                 frm.Spin_Year.Text = dgv_Search.GetFocusedRowCellValue("السنة").ToString();
+                frm.Spin_Year.Enabled = false;
                 frm.txt_Year.Text = dgv_Search.GetFocusedRowCellValue("السنة").ToString();
                 frm.dtp_PublishDate.Text = dgv_Search.GetFocusedRowCellValue("تاريخ النشر").ToString();
+                frm.dtp_PublishDate.Enabled = false;
                 frm.dtp_SaveDate.Text = dgv_Search.GetFocusedRowCellValue("تاريخ الحفظ").ToString();
+                frm.dtp_SaveDate.Enabled = false;
                 frm.txt_Path.Text = dgv_Search.GetFocusedRowCellValue("المسار").ToString();
                 frm.btn_NewIssue.Enabled = true;
                 frm.btn_SaveIssue.Enabled = false;
