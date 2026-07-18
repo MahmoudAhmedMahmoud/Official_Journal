@@ -61,14 +61,10 @@
             this.rb_N = new System.Windows.Forms.RadioButton();
             this.rb_Y = new System.Windows.Forms.RadioButton();
             this.txt_Desc = new System.Windows.Forms.TextBox();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btn_CancelLaw = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_DeleteLaw = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_NewLaw = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_SaveLaw = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_EditeLaw = new DevExpress.XtraEditors.SimpleButton();
             this.gb_Dep = new DevExpress.XtraEditors.GroupControl();
             this.dgv_LawDep = new System.Windows.Forms.DataGridView();
+            this.Dep_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dep_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_DelLawDep = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SearchDep = new DevExpress.XtraEditors.SimpleButton();
             this.btn_AddLawDep = new DevExpress.XtraEditors.SimpleButton();
@@ -81,10 +77,13 @@
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txt_LawYear = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_LawNo = new System.Windows.Forms.TextBox();
-            this.Dep_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dep_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_IDLaw = new System.Windows.Forms.TextBox();
+            this.txt_LawNo = new System.Windows.Forms.TextBox();
+            this.pnl_Lawbtn = new DevExpress.XtraEditors.PanelControl();
+            this.btn_CancelLaw = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_DeleteLaw = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_SaveLaw = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_EditeLaw = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gb_Issue)).BeginInit();
             this.gb_Issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spin_Year.Properties)).BeginInit();
@@ -96,11 +95,11 @@
             this.gb_LawDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gb_Desc)).BeginInit();
             this.gb_Desc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gb_Dep)).BeginInit();
             this.gb_Dep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LawDep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_Lawbtn)).BeginInit();
+            this.pnl_Lawbtn.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Issue
@@ -177,7 +176,7 @@
             // 
             this.Spin_Year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Spin_Year.EditValue = new decimal(new int[] {
-            2025,
+            2026,
             0,
             0,
             0});
@@ -432,6 +431,10 @@
             // 
             this.dgv_Law.GridControl = this.grid_Law;
             this.dgv_Law.Name = "dgv_Law";
+            this.dgv_Law.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Law.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Law.OptionsBehavior.Editable = false;
+            this.dgv_Law.OptionsBehavior.ReadOnly = true;
             this.dgv_Law.OptionsView.ShowFooter = true;
             this.dgv_Law.OptionsView.ShowGroupPanel = false;
             // 
@@ -439,7 +442,6 @@
             // 
             this.gb_LawDetails.Controls.Add(this.btn_SearchAuth);
             this.gb_LawDetails.Controls.Add(this.gb_Desc);
-            this.gb_LawDetails.Controls.Add(this.panelControl1);
             this.gb_LawDetails.Controls.Add(this.gb_Dep);
             this.gb_LawDetails.Controls.Add(this.btn_AddAuth);
             this.gb_LawDetails.Controls.Add(this.cmb_Auth);
@@ -455,7 +457,7 @@
             this.gb_LawDetails.Enabled = false;
             this.gb_LawDetails.Location = new System.Drawing.Point(0, 295);
             this.gb_LawDetails.Name = "gb_LawDetails";
-            this.gb_LawDetails.Size = new System.Drawing.Size(898, 317);
+            this.gb_LawDetails.Size = new System.Drawing.Size(898, 281);
             this.gb_LawDetails.TabIndex = 2;
             this.gb_LawDetails.Text = "بيانات القانون";
             // 
@@ -537,82 +539,6 @@
             this.txt_Desc.TabIndex = 0;
             this.txt_Desc.Text = "لا ينطبق";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.btn_CancelLaw);
-            this.panelControl1.Controls.Add(this.btn_DeleteLaw);
-            this.panelControl1.Controls.Add(this.btn_NewLaw);
-            this.panelControl1.Controls.Add(this.btn_SaveLaw);
-            this.panelControl1.Controls.Add(this.btn_EditeLaw);
-            this.panelControl1.Location = new System.Drawing.Point(0, 281);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(898, 38);
-            this.panelControl1.TabIndex = 6;
-            // 
-            // btn_CancelLaw
-            // 
-            this.btn_CancelLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_CancelLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_CancelLaw.Appearance.Options.UseFont = true;
-            this.btn_CancelLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelLaw.ImageOptions.Image")));
-            this.btn_CancelLaw.Location = new System.Drawing.Point(287, 7);
-            this.btn_CancelLaw.Name = "btn_CancelLaw";
-            this.btn_CancelLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_CancelLaw.TabIndex = 4;
-            this.btn_CancelLaw.Text = "الغاء";
-            this.btn_CancelLaw.Click += new System.EventHandler(this.btn_CancelLaw_Click);
-            // 
-            // btn_DeleteLaw
-            // 
-            this.btn_DeleteLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_DeleteLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_DeleteLaw.Appearance.Options.UseFont = true;
-            this.btn_DeleteLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteLaw.ImageOptions.Image")));
-            this.btn_DeleteLaw.Location = new System.Drawing.Point(353, 7);
-            this.btn_DeleteLaw.Name = "btn_DeleteLaw";
-            this.btn_DeleteLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_DeleteLaw.TabIndex = 5;
-            this.btn_DeleteLaw.Text = "حذف";
-            // 
-            // btn_NewLaw
-            // 
-            this.btn_NewLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_NewLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_NewLaw.Appearance.Options.UseFont = true;
-            this.btn_NewLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NewLaw.ImageOptions.Image")));
-            this.btn_NewLaw.Location = new System.Drawing.Point(551, 7);
-            this.btn_NewLaw.Name = "btn_NewLaw";
-            this.btn_NewLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_NewLaw.TabIndex = 6;
-            this.btn_NewLaw.Text = "جديد";
-            // 
-            // btn_SaveLaw
-            // 
-            this.btn_SaveLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_SaveLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_SaveLaw.Appearance.Options.UseFont = true;
-            this.btn_SaveLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaveLaw.ImageOptions.Image")));
-            this.btn_SaveLaw.Location = new System.Drawing.Point(485, 7);
-            this.btn_SaveLaw.Name = "btn_SaveLaw";
-            this.btn_SaveLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_SaveLaw.TabIndex = 7;
-            this.btn_SaveLaw.Text = "حفظ";
-            // 
-            // btn_EditeLaw
-            // 
-            this.btn_EditeLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_EditeLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_EditeLaw.Appearance.Options.UseFont = true;
-            this.btn_EditeLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditeLaw.ImageOptions.Image")));
-            this.btn_EditeLaw.Location = new System.Drawing.Point(419, 7);
-            this.btn_EditeLaw.Name = "btn_EditeLaw";
-            this.btn_EditeLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_EditeLaw.TabIndex = 8;
-            this.btn_EditeLaw.Text = "تعديل";
-            // 
             // gb_Dep
             // 
             this.gb_Dep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -645,6 +571,19 @@
             this.dgv_LawDep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_LawDep.Size = new System.Drawing.Size(415, 132);
             this.dgv_LawDep.TabIndex = 0;
+            // 
+            // Dep_ID
+            // 
+            this.Dep_ID.HeaderText = "كود";
+            this.Dep_ID.Name = "Dep_ID";
+            this.Dep_ID.ReadOnly = true;
+            this.Dep_ID.Visible = false;
+            // 
+            // Dep_Name
+            // 
+            this.Dep_Name.HeaderText = "الجهة المعنية";
+            this.Dep_Name.Name = "Dep_Name";
+            this.Dep_Name.ReadOnly = true;
             // 
             // btn_DelLawDep
             // 
@@ -787,29 +726,6 @@
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "رقم القانون";
             // 
-            // txt_LawNo
-            // 
-            this.txt_LawNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_LawNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_LawNo.Location = new System.Drawing.Point(721, 30);
-            this.txt_LawNo.Name = "txt_LawNo";
-            this.txt_LawNo.Size = new System.Drawing.Size(100, 20);
-            this.txt_LawNo.TabIndex = 0;
-            this.txt_LawNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Dep_ID
-            // 
-            this.Dep_ID.HeaderText = "كود";
-            this.Dep_ID.Name = "Dep_ID";
-            this.Dep_ID.ReadOnly = true;
-            this.Dep_ID.Visible = false;
-            // 
-            // Dep_Name
-            // 
-            this.Dep_Name.HeaderText = "الجهة المعنية";
-            this.Dep_Name.Name = "Dep_Name";
-            this.Dep_Name.ReadOnly = true;
-            // 
             // txt_IDLaw
             // 
             this.txt_IDLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -821,11 +737,89 @@
             this.txt_IDLaw.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_IDLaw.Visible = false;
             // 
+            // txt_LawNo
+            // 
+            this.txt_LawNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_LawNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_LawNo.Location = new System.Drawing.Point(721, 30);
+            this.txt_LawNo.Name = "txt_LawNo";
+            this.txt_LawNo.Size = new System.Drawing.Size(100, 20);
+            this.txt_LawNo.TabIndex = 0;
+            this.txt_LawNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnl_Lawbtn
+            // 
+            this.pnl_Lawbtn.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_Lawbtn.Appearance.Options.UseBackColor = true;
+            this.pnl_Lawbtn.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnl_Lawbtn.Controls.Add(this.btn_CancelLaw);
+            this.pnl_Lawbtn.Controls.Add(this.btn_DeleteLaw);
+            this.pnl_Lawbtn.Controls.Add(this.btn_SaveLaw);
+            this.pnl_Lawbtn.Controls.Add(this.btn_EditeLaw);
+            this.pnl_Lawbtn.Enabled = false;
+            this.pnl_Lawbtn.Location = new System.Drawing.Point(0, 574);
+            this.pnl_Lawbtn.Name = "pnl_Lawbtn";
+            this.pnl_Lawbtn.Size = new System.Drawing.Size(898, 38);
+            this.pnl_Lawbtn.TabIndex = 7;
+            // 
+            // btn_CancelLaw
+            // 
+            this.btn_CancelLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_CancelLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_CancelLaw.Appearance.Options.UseFont = true;
+            this.btn_CancelLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelLaw.ImageOptions.Image")));
+            this.btn_CancelLaw.Location = new System.Drawing.Point(320, 7);
+            this.btn_CancelLaw.Name = "btn_CancelLaw";
+            this.btn_CancelLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_CancelLaw.TabIndex = 4;
+            this.btn_CancelLaw.Text = "الغاء";
+            this.btn_CancelLaw.Click += new System.EventHandler(this.btn_CancelLaw_Click);
+            // 
+            // btn_DeleteLaw
+            // 
+            this.btn_DeleteLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_DeleteLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_DeleteLaw.Appearance.Options.UseFont = true;
+            this.btn_DeleteLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteLaw.ImageOptions.Image")));
+            this.btn_DeleteLaw.Location = new System.Drawing.Point(386, 7);
+            this.btn_DeleteLaw.Name = "btn_DeleteLaw";
+            this.btn_DeleteLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_DeleteLaw.TabIndex = 5;
+            this.btn_DeleteLaw.Text = "حذف";
+            this.btn_DeleteLaw.Click += new System.EventHandler(this.btn_DeleteLaw_Click);
+            // 
+            // btn_SaveLaw
+            // 
+            this.btn_SaveLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SaveLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_SaveLaw.Appearance.Options.UseFont = true;
+            this.btn_SaveLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaveLaw.ImageOptions.Image")));
+            this.btn_SaveLaw.Location = new System.Drawing.Point(518, 7);
+            this.btn_SaveLaw.Name = "btn_SaveLaw";
+            this.btn_SaveLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_SaveLaw.TabIndex = 7;
+            this.btn_SaveLaw.Text = "حفظ";
+            this.btn_SaveLaw.Click += new System.EventHandler(this.btn_SaveLaw_Click);
+            // 
+            // btn_EditeLaw
+            // 
+            this.btn_EditeLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_EditeLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_EditeLaw.Appearance.Options.UseFont = true;
+            this.btn_EditeLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditeLaw.ImageOptions.Image")));
+            this.btn_EditeLaw.Location = new System.Drawing.Point(452, 7);
+            this.btn_EditeLaw.Name = "btn_EditeLaw";
+            this.btn_EditeLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_EditeLaw.TabIndex = 8;
+            this.btn_EditeLaw.Text = "تعديل";
+            this.btn_EditeLaw.Click += new System.EventHandler(this.btn_EditeLaw_Click);
+            // 
             // frm_AddIssue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 613);
+            this.ClientSize = new System.Drawing.Size(898, 612);
+            this.Controls.Add(this.pnl_Lawbtn);
             this.Controls.Add(this.gb_LawDetails);
             this.Controls.Add(this.gb_Laws);
             this.Controls.Add(this.gb_Issue);
@@ -852,11 +846,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gb_Desc)).EndInit();
             this.gb_Desc.ResumeLayout(false);
             this.gb_Desc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gb_Dep)).EndInit();
             this.gb_Dep.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LawDep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_Lawbtn)).EndInit();
+            this.pnl_Lawbtn.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -886,12 +880,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_AddLawDep;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private System.Windows.Forms.TextBox txt_LawYear;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btn_CancelLaw;
-        private DevExpress.XtraEditors.SimpleButton btn_DeleteLaw;
-        private DevExpress.XtraEditors.SimpleButton btn_NewLaw;
-        private DevExpress.XtraEditors.SimpleButton btn_SaveLaw;
-        private DevExpress.XtraEditors.SimpleButton btn_EditeLaw;
         private DevExpress.XtraEditors.SimpleButton btn_AddAuth;
         private DevExpress.XtraEditors.GroupControl gb_Desc;
         private System.Windows.Forms.RadioButton rb_N;
@@ -919,5 +907,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Dep_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dep_Name;
         private System.Windows.Forms.TextBox txt_IDLaw;
+        private DevExpress.XtraEditors.PanelControl pnl_Lawbtn;
+        private DevExpress.XtraEditors.SimpleButton btn_CancelLaw;
+        private DevExpress.XtraEditors.SimpleButton btn_DeleteLaw;
+        private DevExpress.XtraEditors.SimpleButton btn_SaveLaw;
+        private DevExpress.XtraEditors.SimpleButton btn_EditeLaw;
     }
 }

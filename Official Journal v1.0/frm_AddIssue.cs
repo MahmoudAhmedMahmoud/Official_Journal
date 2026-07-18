@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,24 +26,42 @@ namespace Official_Journal
         cls_Issues ISS = new cls_Issues();
         //----------------------Func-----------------------
         int Add_UPd = 0;     //Add=0 , Upd=1
+        int Law_Add_Upd = 0;
+
         byte[] IssueFile;
 
         public void GetLaws()
         {
-            grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'");
+            grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
+            dgv_Law.Columns[0].Visible=false;
+            dgv_Law.Columns[6].Visible=false;
             gb_Laws.Enabled = true;
             //
             cmb_Auth.DataSource = DAC.SelectQue("select Auth_ID,Auth_Name from tbl_Auth");
             cmb_Auth.DisplayMember = "Auth_Name";
             cmb_Auth.ValueMember = "Auth_ID";
+            cmb_Auth.SelectedIndex = -1;
+
             //
             cmb_Dep.DataSource = DAC.SelectQue("select Dep_ID,Dep_Name from tbl_Department");
             cmb_Dep.DisplayMember = "Dep_Name";
             cmb_Dep.ValueMember = "Dep_ID";
-        }
-        public void Reset()
-        {
+            cmb_Dep.SelectedIndex = -1;
 
+        }
+        public void ResetLawDetails()
+        {
+            txt_IDLaw.Clear();
+            txt_LawNo.Clear();
+            txt_LawYear.Clear();
+            txt_Desc.Clear();
+            cmb_Auth.SelectedIndex=-1;  
+            cmb_Dep.SelectedIndex=-1;
+            dgv_LawDep.Rows.Clear();
+            gb_LawDetails.Enabled = true;
+            gb_Dep.Enabled =false;
+            gb_Desc.Enabled =false;
+            pnl_Lawbtn.Enabled =false;
         }
         //-------------------Load---------------------------
         private void frm_AddIssue_Load(object sender, EventArgs e)
@@ -107,9 +126,11 @@ namespace Official_Journal
             gb_LawDetails.Enabled = true;
             gb_Laws.Enabled = false;
             txt_LawYear.Text = Spin_Year.Text;
-            btn_NewLaw.Enabled = false;
             btn_EditeLaw.Enabled = false;
             btn_DeleteLaw.Enabled = false;
+            cmb_Auth.SelectedIndex = -1;
+            gb_Dep.Enabled = false;
+            Law_Add_Upd = 0;
         }
 
         private void btn_CancelLaw_Click(object sender, EventArgs e)
@@ -117,49 +138,6 @@ namespace Official_Journal
             gb_LawDetails.Enabled = false;
             gb_Laws.Enabled = true;
             gb_Issue.Enabled = true;
-        }
-
-        //------------------Actions-------------------------
-        private void txt_IssueNo_TextChanged(object sender, EventArgs e)
-        {
-            txt_IssueID.Text = "عدد " + txt_IssueNo.Text + "لسنة " + Spin_Year.Text;
-        }
-
-        private void rb_Y_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb_Y.Checked == true)
-            {
-                txt_Desc.Enabled = true;
-                txt_Desc.Text = "";
-            }
-        }
-
-        private void rb_N_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb_N.Checked == true)
-            {
-                if (txt_Desc.Text != "")
-                {
-                    DialogResult R = MessageBox.Show("يوجد وصف فى مضمون القانون هل انت متاكد من الحذف", "تحذير..!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (R == DialogResult.Yes)
-                    {
-                        txt_Desc.Text = "لا بنطبق";
-                        txt_Desc.Enabled = false;
-                    }
-                    else
-                    {
-                        string X  = txt_Desc.Text;
-                        rb_Y.Checked = true;
-                        txt_Desc.Text = X;
-                    }
-                }
-                else
-                {
-                    txt_Desc.Text = "لا بنطبق";
-                    txt_Desc.Enabled = false;
-                }
-            }
-
         }
 
         private void btn_AddLawDep_Click(object sender, EventArgs e)
@@ -185,5 +163,105 @@ namespace Official_Journal
         {
             dgv_LawDep.Rows.RemoveAt(dgv_LawDep.CurrentRow.Index);
         }
+
+        private void btn_SaveLaw_Click(object sender, EventArgs e)
+        {
+            if (txt_LawNo.Text == "" || dtp_LawIssueDate.Text == "" || cmb_Auth.Text == "" || txt_Desc.Text == "")
+            {
+                MSG.NullField();
+            }
+            else if (rb_Y.Checked == true && dgv_LawDep.RowCount == 0)
+            {
+                MSG.Exception("تاكد من ادخال الجهات المعنية");
+            }
+            else
+            {
+                if (Law_Add_Upd == 0)
+                {
+                    string Desc = $"رقم القانون: {txt_LawNo.Text}-سنة:{txt_LawYear.Text}- تاريخ الاصدار:{dtp_LawIssueDate.Text}- جهة الاصدار:{cmb_Auth.Text}- مضمون القرار:{txt_Desc.Text}";
+                    ISS.AddLaw(txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}", dtp_LawIssueDate.Value, int.Parse(cmb_Auth.SelectedValue.ToString()),
+                        "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                    if (dgv_LawDep.RowCount > 0)
+                    {
+                        foreach (DataGridViewRow R in dgv_LawDep.Rows)
+                        {
+                            ISS.AddLawDep(R.Cells[0].Value.ToString(), txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text
+                                , "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, $"الجهة المعنية :{R.Cells[1].Value.ToString()}", $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                        }
+                    }
+                    btn_SaveLaw.Enabled = false;
+                    btn_CancelLaw.Enabled = false;
+                    GetLaws();
+                    ResetLawDetails();
+                }
+                else
+                {
+                    //
+                }
+            }
+        }
+
+        private void btn_DeleteLaw_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_EditeLaw_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //------------------Actions-------------------------
+        private void txt_IssueNo_TextChanged(object sender, EventArgs e)
+        {
+            txt_IssueID.Text = "عدد " + txt_IssueNo.Text + "لسنة " + Spin_Year.Text;
+        }
+
+        private void rb_Y_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_Y.Checked == true)
+            {
+                txt_Desc.Enabled = true;
+                txt_Desc.Text = "";
+                gb_Dep.Enabled = true;
+            }
+        }
+
+        private void rb_N_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_N.Checked == true)
+            {
+                if (txt_Desc.Text != ""||dgv_LawDep.RowCount>0)
+                {
+                    DialogResult R = MessageBox.Show("يوجد وصف فى مضمون القرار او الجهات المعنية هل انت متاكد من الحذف", "تحذير..!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (R == DialogResult.Yes)
+                    {
+                        txt_Desc.Text = "لا بنطبق";
+                        txt_Desc.Enabled = false;
+                        dgv_LawDep.Rows.Clear();
+                        cmb_Dep.SelectedIndex = -1;
+                        gb_Dep.Enabled = false;
+                    }
+                    else
+                    {
+                        string X  = txt_Desc.Text;
+                        rb_Y.Checked = true;
+                        txt_Desc.Text = X;
+                    }
+                }
+                else
+                {
+                    txt_Desc.Text = "لا بنطبق";
+                    txt_Desc.Enabled = false;
+                    dgv_LawDep.Rows.Clear();
+                    cmb_Dep.SelectedIndex = -1;
+                    gb_Dep.Enabled = false;
+                }
+            }
+
+        }
+
+
+
     }
 }
