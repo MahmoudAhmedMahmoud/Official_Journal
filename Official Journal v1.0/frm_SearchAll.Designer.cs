@@ -31,51 +31,51 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SearchAll));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_SaveDate = new System.Windows.Forms.DateTimePicker();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_PubDate = new System.Windows.Forms.DateTimePicker();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_ = new System.Windows.Forms.ComboBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Auth = new System.Windows.Forms.ComboBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
+            this.spin_Year = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_LawNo = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_IssueNo = new System.Windows.Forms.TextBox();
+            this.btn_Search = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grid_Search = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spin_Year.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Controls.Add(this.dateTimePicker1);
+            this.groupControl1.Controls.Add(this.dtp_SaveDate);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.dateTimePicker2);
+            this.groupControl1.Controls.Add(this.dtp_PubDate);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.comboBox3);
-            this.groupControl1.Controls.Add(this.comboBox2);
+            this.groupControl1.Controls.Add(this.cmb_);
+            this.groupControl1.Controls.Add(this.cmbDepartment);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.comboBox1);
+            this.groupControl1.Controls.Add(this.cmb_Auth);
             this.groupControl1.Controls.Add(this.labelControl8);
-            this.groupControl1.Controls.Add(this.spinEdit1);
+            this.groupControl1.Controls.Add(this.spin_Year);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.textBox2);
+            this.groupControl1.Controls.Add(this.txt_LawNo);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textBox1);
-            this.groupControl1.Controls.Add(this.simpleButton6);
+            this.groupControl1.Controls.Add(this.txt_IssueNo);
+            this.groupControl1.Controls.Add(this.btn_Search);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
@@ -94,17 +94,17 @@
             this.labelControl10.TabIndex = 17;
             this.labelControl10.Text = "مطابقة القرار";
             // 
-            // dateTimePicker1
+            // dtp_SaveDate
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(214, 54);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtp_SaveDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_SaveDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_SaveDate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.dtp_SaveDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_SaveDate.Location = new System.Drawing.Point(214, 54);
+            this.dtp_SaveDate.Name = "dtp_SaveDate";
+            this.dtp_SaveDate.RightToLeftLayout = true;
+            this.dtp_SaveDate.Size = new System.Drawing.Size(100, 20);
+            this.dtp_SaveDate.TabIndex = 16;
             // 
             // labelControl5
             // 
@@ -117,17 +117,17 @@
             this.labelControl5.TabIndex = 15;
             this.labelControl5.Text = "تاريخ الحفظ";
             // 
-            // dateTimePicker2
+            // dtp_PubDate
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(320, 54);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeftLayout = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dtp_PubDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_PubDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_PubDate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.dtp_PubDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_PubDate.Location = new System.Drawing.Point(320, 54);
+            this.dtp_PubDate.Name = "dtp_PubDate";
+            this.dtp_PubDate.RightToLeftLayout = true;
+            this.dtp_PubDate.Size = new System.Drawing.Size(100, 20);
+            this.dtp_PubDate.TabIndex = 14;
             // 
             // labelControl6
             // 
@@ -140,27 +140,27 @@
             this.labelControl6.TabIndex = 13;
             this.labelControl6.Text = "تاريخ النشر";
             // 
-            // comboBox3
+            // cmb_
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(96, 54);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(112, 21);
-            this.comboBox3.TabIndex = 12;
+            this.cmb_.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.cmb_.FormattingEnabled = true;
+            this.cmb_.Location = new System.Drawing.Point(96, 54);
+            this.cmb_.Name = "cmb_";
+            this.cmb_.Size = new System.Drawing.Size(112, 21);
+            this.cmb_.TabIndex = 12;
             // 
-            // comboBox2
+            // cmbDepartment
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(96, 94);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 21);
-            this.comboBox2.TabIndex = 12;
+            this.cmbDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDepartment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDepartment.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(96, 94);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(231, 21);
+            this.cmbDepartment.TabIndex = 12;
             // 
             // labelControl3
             // 
@@ -173,16 +173,16 @@
             this.labelControl3.TabIndex = 11;
             this.labelControl3.Text = "الجهة المعنية";
             // 
-            // comboBox1
+            // cmb_Auth
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(418, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cmb_Auth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Auth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_Auth.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.cmb_Auth.FormattingEnabled = true;
+            this.cmb_Auth.Location = new System.Drawing.Point(418, 94);
+            this.cmb_Auth.Name = "cmb_Auth";
+            this.cmb_Auth.Size = new System.Drawing.Size(231, 21);
+            this.cmb_Auth.TabIndex = 12;
             // 
             // labelControl8
             // 
@@ -195,26 +195,26 @@
             this.labelControl8.TabIndex = 11;
             this.labelControl8.Text = "جهة الاصدار";
             // 
-            // spinEdit1
+            // spin_Year
             // 
-            this.spinEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.spinEdit1.EditValue = new decimal(new int[] {
+            this.spin_Year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.spin_Year.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.spinEdit1.EnterMoveNextControl = true;
-            this.spinEdit1.Location = new System.Drawing.Point(426, 54);
-            this.spinEdit1.Name = "spinEdit1";
-            this.spinEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.spinEdit1.Properties.Appearance.Options.UseFont = true;
-            this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.spin_Year.EnterMoveNextControl = true;
+            this.spin_Year.Location = new System.Drawing.Point(426, 54);
+            this.spin_Year.Name = "spin_Year";
+            this.spin_Year.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.spin_Year.Properties.Appearance.Options.UseFont = true;
+            this.spin_Year.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEdit1.Properties.EditFormat.FormatString = "yyyy";
-            this.spinEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.spinEdit1.Properties.MaskSettings.Set("mask", "0000");
-            this.spinEdit1.Size = new System.Drawing.Size(76, 20);
-            this.spinEdit1.TabIndex = 10;
+            this.spin_Year.Properties.EditFormat.FormatString = "yyyy";
+            this.spin_Year.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.spin_Year.Properties.MaskSettings.Set("mask", "0000");
+            this.spin_Year.Size = new System.Drawing.Size(76, 20);
+            this.spin_Year.TabIndex = 10;
             // 
             // labelControl2
             // 
@@ -238,15 +238,15 @@
             this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "رقم القانون";
             // 
-            // textBox2
+            // txt_LawNo
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(508, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(105, 20);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_LawNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_LawNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_LawNo.Location = new System.Drawing.Point(508, 54);
+            this.txt_LawNo.Name = "txt_LawNo";
+            this.txt_LawNo.Size = new System.Drawing.Size(105, 20);
+            this.txt_LawNo.TabIndex = 7;
+            this.txt_LawNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelControl1
             // 
@@ -259,27 +259,28 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "رقم العدد";
             // 
-            // textBox1
+            // txt_IssueNo
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(619, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_IssueNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_IssueNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_IssueNo.Location = new System.Drawing.Point(619, 54);
+            this.txt_IssueNo.Name = "txt_IssueNo";
+            this.txt_IssueNo.Size = new System.Drawing.Size(100, 20);
+            this.txt_IssueNo.TabIndex = 5;
+            this.txt_IssueNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // simpleButton6
+            // btn_Search
             // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(14, 94);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(60, 23);
-            this.simpleButton6.TabIndex = 4;
-            this.simpleButton6.Text = "بحث";
+            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Search.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_Search.Appearance.Options.UseFont = true;
+            this.btn_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.btn_Search.Location = new System.Drawing.Point(14, 94);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(60, 23);
+            this.btn_Search.TabIndex = 4;
+            this.btn_Search.Text = "بحث";
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // simpleButton1
             // 
@@ -293,20 +294,20 @@
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "فتح الملف";
             // 
-            // gridControl1
+            // grid_Search
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 133);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(732, 475);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grid_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_Search.Location = new System.Drawing.Point(0, 133);
+            this.grid_Search.MainView = this.gridView1;
+            this.grid_Search.Name = "grid_Search";
+            this.grid_Search.Size = new System.Drawing.Size(732, 475);
+            this.grid_Search.TabIndex = 2;
+            this.grid_Search.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grid_Search;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -317,7 +318,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 608);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.grid_Search);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -330,8 +331,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spin_Year.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -340,25 +341,25 @@
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btn_Search;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_IssueNo;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.TextBox textBox2;
-        private DevExpress.XtraEditors.SpinEdit spinEdit1;
+        private System.Windows.Forms.TextBox txt_LawNo;
+        private DevExpress.XtraEditors.SpinEdit spin_Year;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Auth;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbDepartment;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_PubDate;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_SaveDate;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmb_;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grid_Search;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

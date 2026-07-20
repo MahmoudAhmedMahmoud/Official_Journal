@@ -130,5 +130,36 @@ namespace Official_Journal
             }
         }
 
+        private void btn_frmPub_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var Open_frm = Application.OpenForms["frm_Publish"] as frm_Publish;
+            if (Open_frm == null)
+            {
+                frm_Publish frm = new frm_Publish();
+                //frm.MdiParent = this;
+                frm.ShowDialog();
+            }
+            else
+            {
+                frm_Publish frm = new frm_Publish();
+                frm.BringToFront();
+            }
+        }
+
+        private void btn_frmSearch_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var Open_frm = Application.OpenForms["frm_SearchAll"] as frm_SearchAll;
+            if (Open_frm == null)
+            {
+                frm_SearchAll frm = new frm_SearchAll();
+                //frm.MdiParent = this;
+                frm.ShowDialog();
+            }
+            else
+            {
+                frm_SearchAll frm = new frm_SearchAll();
+                frm.BringToFront();
+            }
+        }
     }
 }

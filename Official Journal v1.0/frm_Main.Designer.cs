@@ -34,8 +34,8 @@
             this.btn_frmDepartment = new DevExpress.XtraBars.BarButtonItem();
             this.btn_frmIssuingAuth = new DevExpress.XtraBars.BarButtonItem();
             this.btn_frmAddIssue = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_frmPub = new DevExpress.XtraBars.BarButtonItem();
+            this.btn = new DevExpress.XtraBars.BarButtonItem();
             this.StaticItem_User = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -46,6 +46,7 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_frmSearch = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +61,12 @@
             this.btn_frmDepartment,
             this.btn_frmIssuingAuth,
             this.btn_frmAddIssue,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.StaticItem_User});
+            this.btn_frmPub,
+            this.btn,
+            this.StaticItem_User,
+            this.btn_frmSearch});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.StaticItem_User);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -120,29 +122,31 @@
             this.btn_frmAddIssue.Name = "btn_frmAddIssue";
             this.btn_frmAddIssue.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmAddIssue_ItemClick);
             // 
-            // barButtonItem1
+            // btn_frmPub
             // 
-            this.barButtonItem1.Caption = "نشر الاعداد";
-            this.barButtonItem1.Id = 5;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btn_frmPub.Caption = "نشر الاعداد";
+            this.btn_frmPub.Id = 5;
+            this.btn_frmPub.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_frmPub.ImageOptions.Image")));
+            this.btn_frmPub.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_frmPub.ImageOptions.LargeImage")));
+            this.btn_frmPub.Name = "btn_frmPub";
+            this.btn_frmPub.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmPub_ItemClick);
             // 
-            // barButtonItem2
+            // btn
             // 
-            this.barButtonItem2.Caption = "حركة المستخدمين";
-            this.barButtonItem2.Id = 6;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.btn.Caption = "حركة المستخدمين";
+            this.btn.Id = 6;
+            this.btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btn.Name = "btn";
             // 
             // StaticItem_User
             // 
             this.StaticItem_User.Caption = ".";
             this.StaticItem_User.Id = 7;
-            this.StaticItem_User.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.Image")));
-            this.StaticItem_User.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.ImageOptions.LargeImage")));
+            this.StaticItem_User.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("StaticItem_User.ImageOptions.Image")));
+            this.StaticItem_User.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("StaticItem_User.ImageOptions.LargeImage")));
             this.StaticItem_User.Name = "StaticItem_User";
+            this.StaticItem_User.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // ribbonPage1
             // 
@@ -180,7 +184,7 @@
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_frmPub);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPage3
@@ -192,7 +196,8 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_frmSearch);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // pictureBox1
@@ -205,6 +210,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_frmSearch
+            // 
+            this.btn_frmSearch.Caption = "البحث";
+            this.btn_frmSearch.Id = 8;
+            this.btn_frmSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btn_frmSearch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btn_frmSearch.Name = "btn_frmSearch";
+            this.btn_frmSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmSearch_ItemClick);
             // 
             // frm_Main
             // 
@@ -247,9 +261,10 @@
         private DevExpress.XtraBars.BarButtonItem btn_frmAddIssue;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btn_frmPub;
+        private DevExpress.XtraBars.BarButtonItem btn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraBars.BarStaticItem StaticItem_User;
+        private DevExpress.XtraBars.BarButtonItem btn_frmSearch;
     }
 }

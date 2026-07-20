@@ -29,7 +29,6 @@ namespace Official_Journal
         int Law_Add_Upd = 0;
 
         byte[] IssueFile;
-
         public void GetLaws()
         {
             grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
@@ -131,6 +130,7 @@ namespace Official_Journal
             cmb_Auth.SelectedIndex = -1;
             gb_Dep.Enabled = false;
             Law_Add_Upd = 0;
+            pnl_Lawbtn.Enabled = true;
         }
 
         private void btn_CancelLaw_Click(object sender, EventArgs e)
@@ -138,6 +138,8 @@ namespace Official_Journal
             gb_LawDetails.Enabled = false;
             gb_Laws.Enabled = true;
             gb_Issue.Enabled = true;
+            btn_SaveLaw.Enabled = false;
+            pnl_Lawbtn.Enabled = false; 
         }
 
         private void btn_AddLawDep_Click(object sender, EventArgs e)

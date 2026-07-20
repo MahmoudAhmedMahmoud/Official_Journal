@@ -205,3 +205,4 @@ E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Login.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Users.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Search.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Publish.resources

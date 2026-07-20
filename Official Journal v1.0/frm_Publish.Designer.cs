@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Publish));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btn_CancelLaw = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.page_NotPub = new DevExpress.XtraTab.XtraTabPage();
+            this.btn_Pub = new DevExpress.XtraEditors.SimpleButton();
+            this.grid_NotPub = new DevExpress.XtraGrid.GridControl();
+            this.dgv_NotPub = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.page_Pub = new DevExpress.XtraTab.XtraTabPage();
+            this.btn_NotPub = new DevExpress.XtraEditors.SimpleButton();
+            this.grid_Pub = new DevExpress.XtraGrid.GridControl();
+            this.dgv_Pub = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.page_NotPub.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_NotPub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NotPub)).BeginInit();
+            this.page_Pub.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Pub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Pub)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -53,86 +53,111 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
+            this.xtraTabControl1.SelectedTabPage = this.page_NotPub;
             this.xtraTabControl1.Size = new System.Drawing.Size(784, 612);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.page_Pub,
+            this.page_NotPub});
+            this.xtraTabControl1.Click += new System.EventHandler(this.page_Pub_Click);
             // 
-            // xtraTabPage1
+            // page_NotPub
             // 
-            this.xtraTabPage1.Controls.Add(this.btn_CancelLaw);
-            this.xtraTabPage1.Controls.Add(this.gridControl1);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(777, 584);
-            this.xtraTabPage1.Text = "الاعداد الموزعة";
+            this.page_NotPub.Controls.Add(this.btn_Pub);
+            this.page_NotPub.Controls.Add(this.grid_NotPub);
+            this.page_NotPub.Name = "page_NotPub";
+            this.page_NotPub.Size = new System.Drawing.Size(777, 584);
+            this.page_NotPub.Text = "الاعداد الغير موزعة";
+            this.page_NotPub.Click += new System.EventHandler(this.page_NotPub_Click);
             // 
-            // xtraTabPage2
+            // btn_Pub
             // 
-            this.xtraTabPage2.Controls.Add(this.simpleButton1);
-            this.xtraTabPage2.Controls.Add(this.gridControl2);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(777, 584);
-            this.xtraTabPage2.Text = "الاعداد الغير موزعة";
+            this.btn_Pub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Pub.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_Pub.Appearance.Options.UseFont = true;
+            this.btn_Pub.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Pub.ImageOptions.Image")));
+            this.btn_Pub.Location = new System.Drawing.Point(10, 558);
+            this.btn_Pub.Name = "btn_Pub";
+            this.btn_Pub.Size = new System.Drawing.Size(85, 23);
+            this.btn_Pub.TabIndex = 5;
+            this.btn_Pub.Text = "توزيع";
+            this.btn_Pub.Click += new System.EventHandler(this.btn_Pub_Click);
             // 
-            // gridControl1
+            // grid_NotPub
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(777, 584);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grid_NotPub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_NotPub.Location = new System.Drawing.Point(0, 0);
+            this.grid_NotPub.MainView = this.dgv_NotPub;
+            this.grid_NotPub.Name = "grid_NotPub";
+            this.grid_NotPub.Size = new System.Drawing.Size(777, 584);
+            this.grid_NotPub.TabIndex = 0;
+            this.grid_NotPub.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_NotPub});
             // 
-            // gridView1
+            // dgv_NotPub
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
+            this.dgv_NotPub.GridControl = this.grid_NotPub;
+            this.dgv_NotPub.Name = "dgv_NotPub";
+            this.dgv_NotPub.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_NotPub.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_NotPub.OptionsBehavior.Editable = false;
+            this.dgv_NotPub.OptionsBehavior.ReadOnly = true;
+            this.dgv_NotPub.OptionsCustomization.AllowColumnMoving = false;
+            this.dgv_NotPub.OptionsCustomization.AllowGroup = false;
+            this.dgv_NotPub.OptionsFind.AlwaysVisible = true;
+            this.dgv_NotPub.OptionsSelection.MultiSelect = true;
+            this.dgv_NotPub.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.dgv_NotPub.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full;
+            this.dgv_NotPub.OptionsView.ShowFooter = true;
+            this.dgv_NotPub.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControl2
+            // page_Pub
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(0, 0);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(777, 584);
-            this.gridControl2.TabIndex = 0;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.page_Pub.Controls.Add(this.btn_NotPub);
+            this.page_Pub.Controls.Add(this.grid_Pub);
+            this.page_Pub.Name = "page_Pub";
+            this.page_Pub.Size = new System.Drawing.Size(777, 584);
+            this.page_Pub.Text = "الاعداد الموزعة";
+            this.page_Pub.Click += new System.EventHandler(this.page_Pub_Click);
             // 
-            // gridView2
+            // btn_NotPub
             // 
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowFooter = true;
+            this.btn_NotPub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_NotPub.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_NotPub.Appearance.Options.UseFont = true;
+            this.btn_NotPub.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NotPub.ImageOptions.Image")));
+            this.btn_NotPub.Location = new System.Drawing.Point(10, 558);
+            this.btn_NotPub.Name = "btn_NotPub";
+            this.btn_NotPub.Size = new System.Drawing.Size(104, 23);
+            this.btn_NotPub.TabIndex = 5;
+            this.btn_NotPub.Text = "سحب التوزيع";
+            this.btn_NotPub.Click += new System.EventHandler(this.btn_NotPub_Click);
             // 
-            // btn_CancelLaw
+            // grid_Pub
             // 
-            this.btn_CancelLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_CancelLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.btn_CancelLaw.Appearance.Options.UseFont = true;
-            this.btn_CancelLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelLaw.ImageOptions.Image")));
-            this.btn_CancelLaw.Location = new System.Drawing.Point(10, 558);
-            this.btn_CancelLaw.Name = "btn_CancelLaw";
-            this.btn_CancelLaw.Size = new System.Drawing.Size(60, 23);
-            this.btn_CancelLaw.TabIndex = 5;
-            this.btn_CancelLaw.Text = "الغاء";
+            this.grid_Pub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_Pub.Location = new System.Drawing.Point(0, 0);
+            this.grid_Pub.MainView = this.dgv_Pub;
+            this.grid_Pub.Name = "grid_Pub";
+            this.grid_Pub.Size = new System.Drawing.Size(777, 584);
+            this.grid_Pub.TabIndex = 0;
+            this.grid_Pub.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_Pub});
             // 
-            // simpleButton1
+            // dgv_Pub
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(10, 558);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(60, 23);
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "الغاء";
+            this.dgv_Pub.GridControl = this.grid_Pub;
+            this.dgv_Pub.Name = "dgv_Pub";
+            this.dgv_Pub.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Pub.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Pub.OptionsBehavior.Editable = false;
+            this.dgv_Pub.OptionsBehavior.ReadOnly = true;
+            this.dgv_Pub.OptionsCustomization.AllowGroup = false;
+            this.dgv_Pub.OptionsFind.AlwaysVisible = true;
+            this.dgv_Pub.OptionsSelection.MultiSelect = true;
+            this.dgv_Pub.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.dgv_Pub.OptionsView.ShowFooter = true;
+            this.dgv_Pub.OptionsView.ShowGroupPanel = false;
             // 
             // frm_Publish
             // 
@@ -147,15 +172,17 @@
             this.Name = "frm_Publish";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "توزيع الاعداد";
+            this.Load += new System.EventHandler(this.frm_Publish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.page_NotPub.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_NotPub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NotPub)).EndInit();
+            this.page_Pub.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Pub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Pub)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,13 +190,13 @@
         #endregion
 
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btn_CancelLaw;
+        private DevExpress.XtraTab.XtraTabPage page_NotPub;
+        private DevExpress.XtraTab.XtraTabPage page_Pub;
+        private DevExpress.XtraGrid.GridControl grid_Pub;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_Pub;
+        private DevExpress.XtraGrid.GridControl grid_NotPub;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_NotPub;
+        private DevExpress.XtraEditors.SimpleButton btn_Pub;
+        private DevExpress.XtraEditors.SimpleButton btn_NotPub;
     }
 }
