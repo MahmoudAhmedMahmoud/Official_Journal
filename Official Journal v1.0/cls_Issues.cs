@@ -108,9 +108,9 @@ namespace Official_Journal
         }
 
         public void AddLaw(string Law_No, string Issue_No, string Issue_Year, string Law_ID, DateTime Law_IssueDate, 
-               int Auth_ID, string Model_Type, string Action_Type, string User_ID, string Tran_Describe, string Link_ID)
+               int Auth_ID,string Law_ok,string Law_Desc, string Model_Type, string Action_Type, string User_ID, string Tran_Describe, string Link_ID)
         {
-            SqlParameter[] Par = new SqlParameter[11];
+            SqlParameter[] Par = new SqlParameter[13];
             Par[0] = new SqlParameter("@Law_No", SqlDbType.NVarChar, 50);
             Par[0].Value = Law_No;
             Par[1] = new SqlParameter("@Issue_No", SqlDbType.NVarChar, 50);
@@ -123,16 +123,20 @@ namespace Official_Journal
             Par[4].Value = Law_IssueDate;
             Par[5] = new SqlParameter("@Auth_ID", SqlDbType.Int);
             Par[5].Value = Auth_ID;
-            Par[6] = new SqlParameter("@Model_Type", SqlDbType.NVarChar, 50);
-            Par[6].Value = Model_Type;
-            Par[7] = new SqlParameter("@Action_Type", SqlDbType.NVarChar, 50);
-            Par[7].Value = Action_Type;
-            Par[8] = new SqlParameter("@User_ID", SqlDbType.NVarChar, 50);
-            Par[8].Value = User_ID;
-            Par[9] = new SqlParameter("@Tran_Describe", SqlDbType.NVarChar, 50);
-            Par[9].Value = Tran_Describe;
-            Par[10] = new SqlParameter("@Link_ID", SqlDbType.NVarChar, 50);
-            Par[10].Value = Link_ID;
+            Par[6] = new SqlParameter("@Law_ok", SqlDbType.NVarChar, 50);
+            Par[6].Value = Law_ok;
+            Par[7] = new SqlParameter("@Law_Desc", SqlDbType.NVarChar, 500);
+            Par[7].Value = Law_Desc;
+            Par[8] = new SqlParameter("@Model_Type", SqlDbType.NVarChar, 50);
+            Par[8].Value = Model_Type;
+            Par[9] = new SqlParameter("@Action_Type", SqlDbType.NVarChar, 50);
+            Par[9].Value = Action_Type;
+            Par[10] = new SqlParameter("@User_ID", SqlDbType.NVarChar, 50);
+            Par[10].Value = User_ID;
+            Par[11] = new SqlParameter("@Tran_Describe", SqlDbType.NVarChar, 50);
+            Par[11].Value = Tran_Describe;
+            Par[12] = new SqlParameter("@Link_ID", SqlDbType.NVarChar, 50);
+            Par[12].Value = Link_ID;
             DAC.CnOpen();
             DAC.ExcCmd("SP_AddLaw", Par);
             DAC.CnClose();

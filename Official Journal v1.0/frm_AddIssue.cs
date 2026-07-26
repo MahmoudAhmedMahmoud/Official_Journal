@@ -40,13 +40,11 @@ namespace Official_Journal
             cmb_Auth.DisplayMember = "Auth_Name";
             cmb_Auth.ValueMember = "Auth_ID";
             cmb_Auth.SelectedIndex = -1;
-
             //
             cmb_Dep.DataSource = DAC.SelectQue("select Dep_ID,Dep_Name from tbl_Department");
             cmb_Dep.DisplayMember = "Dep_Name";
             cmb_Dep.ValueMember = "Dep_ID";
             cmb_Dep.SelectedIndex = -1;
-
         }
         public void ResetLawDetails()
         {
@@ -131,6 +129,30 @@ namespace Official_Journal
             gb_Dep.Enabled = false;
             Law_Add_Upd = 0;
             pnl_Lawbtn.Enabled = true;
+            btn_SaveLaw.Enabled = true;
+        }
+
+        private void btn_NewIssue_Click(object sender, EventArgs e)
+        {
+            this.btn_CancelLaw_Click(sender, e);
+            txt_IssueNo.Clear();
+            txt_ID.Clear();
+            Spin_Year.Text = "2026";
+            txt_IssueID.Clear();
+            dtp_PublishDate.Value = DateTime.Now;
+            dtp_SaveDate.Value = DateTime.Now;
+            txt_Path.Clear();
+            btn_SaveIssue.Enabled = true;
+            btn_EditeIssue.Enabled = false; 
+            btn_DeleteIssue.Enabled = false;
+            grid_Law.Enabled = false;
+            grid_Law.DataSource= null;
+            txt_IssueNo.Enabled=true;
+            Spin_Year.Enabled = true;
+            dtp_LawIssueDate.Enabled = true;
+            dtp_PublishDate.Enabled = true;
+            btn_AddLaw.Enabled=false;
+            btn_NewIssue.Enabled = false;
         }
 
         private void btn_CancelLaw_Click(object sender, EventArgs e)
@@ -140,6 +162,11 @@ namespace Official_Journal
             gb_Issue.Enabled = true;
             btn_SaveLaw.Enabled = false;
             pnl_Lawbtn.Enabled = false; 
+            btn_AddFile.Enabled = false;
+            btn_NewIssue.Enabled = true;
+            btn_SaveIssue.Enabled = false;
+            btn_EditeIssue.Enabled = true;
+            btn_DeleteIssue.Enabled = true;
         }
 
         private void btn_AddLawDep_Click(object sender, EventArgs e)
@@ -181,8 +208,18 @@ namespace Official_Journal
                 if (Law_Add_Upd == 0)
                 {
                     string Desc = $"رقم القانون: {txt_LawNo.Text}-سنة:{txt_LawYear.Text}- تاريخ الاصدار:{dtp_LawIssueDate.Text}- جهة الاصدار:{cmb_Auth.Text}- مضمون القرار:{txt_Desc.Text}";
-                    ISS.AddLaw(txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}", dtp_LawIssueDate.Value, int.Parse(cmb_Auth.SelectedValue.ToString()),
-                        "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                    string Law_Ok;
+                    if (rb_N.Checked)
+                    {
+                        Law_Ok = "لا ينطبق";
+                    }
+                    else
+                    {
+                        Law_Ok = "ينطبق";  
+                    }
+                        ISS.AddLaw(txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}", dtp_LawIssueDate.Value, int.Parse(cmb_Auth.SelectedValue.ToString()),
+    
+                            Law_Ok, txt_Desc.Text, "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
                     if (dgv_LawDep.RowCount > 0)
                     {
                         foreach (DataGridViewRow R in dgv_LawDep.Rows)
@@ -211,6 +248,14 @@ namespace Official_Journal
         private void btn_EditeLaw_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
+            dgv_Law.Columns[0].Visible = false;
+            dgv_Law.Columns[6].Visible = false;
+            gb_Laws.Enabled = true;
         }
 
         //------------------Actions-------------------------
@@ -263,7 +308,15 @@ namespace Official_Journal
 
         }
 
+        private void dgv_Law_DoubleClick(object sender, EventArgs e)
+        {
+            txt_LawNo.Text=dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
+            txt_IDLaw.Text=dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
+            dtp_LawIssueDate.Text = dgv_Law.GetFocusedRowCellValue("تاريخ الاصدار").ToString();
+            cmb_Auth.Text = dgv_Law.GetFocusedRowCellValue("جهة الاصدار").ToString();
+            //ينطبق ولا ينطبق
 
-
+            //الجهة المعنية
+        }
     }
 }

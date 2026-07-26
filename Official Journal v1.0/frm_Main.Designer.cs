@@ -37,6 +37,7 @@
             this.btn_frmPub = new DevExpress.XtraBars.BarButtonItem();
             this.btn = new DevExpress.XtraBars.BarButtonItem();
             this.StaticItem_User = new DevExpress.XtraBars.BarStaticItem();
+            this.btn_frmSearch = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -46,7 +47,6 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_frmSearch = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -135,8 +135,8 @@
             // 
             this.btn.Caption = "حركة المستخدمين";
             this.btn.Id = 6;
-            this.btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.Image")));
+            this.btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.LargeImage")));
             this.btn.Name = "btn";
             // 
             // StaticItem_User
@@ -147,6 +147,15 @@
             this.StaticItem_User.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("StaticItem_User.ImageOptions.LargeImage")));
             this.StaticItem_User.Name = "StaticItem_User";
             this.StaticItem_User.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btn_frmSearch
+            // 
+            this.btn_frmSearch.Caption = "البحث";
+            this.btn_frmSearch.Id = 8;
+            this.btn_frmSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_frmSearch.ImageOptions.Image")));
+            this.btn_frmSearch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_frmSearch.ImageOptions.LargeImage")));
+            this.btn_frmSearch.Name = "btn_frmSearch";
+            this.btn_frmSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmSearch_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -210,15 +219,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_frmSearch
-            // 
-            this.btn_frmSearch.Caption = "البحث";
-            this.btn_frmSearch.Id = 8;
-            this.btn_frmSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btn_frmSearch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btn_frmSearch.Name = "btn_frmSearch";
-            this.btn_frmSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmSearch_ItemClick);
             // 
             // frm_Main
             // 

@@ -84,6 +84,7 @@
             this.btn_DeleteLaw = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SaveLaw = new DevExpress.XtraEditors.SimpleButton();
             this.btn_EditeLaw = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gb_Issue)).BeginInit();
             this.gb_Issue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spin_Year.Properties)).BeginInit();
@@ -171,6 +172,7 @@
             this.btn_NewIssue.Size = new System.Drawing.Size(60, 23);
             this.btn_NewIssue.TabIndex = 6;
             this.btn_NewIssue.Text = "جديد";
+            this.btn_NewIssue.Click += new System.EventHandler(this.btn_NewIssue_Click);
             // 
             // Spin_Year
             // 
@@ -393,6 +395,7 @@
             // 
             // gb_Laws
             // 
+            this.gb_Laws.Controls.Add(this.btn_Refresh);
             this.gb_Laws.Controls.Add(this.btn_AddLaw);
             this.gb_Laws.Controls.Add(this.grid_Law);
             this.gb_Laws.Dock = System.Windows.Forms.DockStyle.Top;
@@ -437,6 +440,7 @@
             this.dgv_Law.OptionsBehavior.ReadOnly = true;
             this.dgv_Law.OptionsView.ShowFooter = true;
             this.dgv_Law.OptionsView.ShowGroupPanel = false;
+            this.dgv_Law.DoubleClick += new System.EventHandler(this.dgv_Law_DoubleClick);
             // 
             // gb_LawDetails
             // 
@@ -814,6 +818,21 @@
             this.btn_EditeLaw.Text = "تعديل";
             this.btn_EditeLaw.Click += new System.EventHandler(this.btn_EditeLaw_Click);
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Refresh.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_Refresh.Appearance.Options.UseFont = true;
+            this.btn_Refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_Refresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_Refresh.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btn_Refresh.Location = new System.Drawing.Point(6, 3);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btn_Refresh.Size = new System.Drawing.Size(24, 19);
+            this.btn_Refresh.TabIndex = 4;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // frm_AddIssue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -912,5 +931,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_DeleteLaw;
         private DevExpress.XtraEditors.SimpleButton btn_SaveLaw;
         private DevExpress.XtraEditors.SimpleButton btn_EditeLaw;
+        private DevExpress.XtraEditors.SimpleButton btn_Refresh;
     }
 }
