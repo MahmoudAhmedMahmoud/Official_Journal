@@ -1,5 +1,6 @@
 ﻿using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting.Export.Pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,10 @@ namespace Official_Journal
         {
             grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
             dgv_Law.Columns[0].Visible=false;
-            dgv_Law.Columns[6].Visible=false;
+            dgv_Law.Columns[6].Visible = false;
+            dgv_Law.Columns[8].Visible = false;
+            dgv_Law.Columns[9].Visible = false;
+
             gb_Laws.Enabled = true;
             //
             cmb_Auth.DataSource = DAC.SelectQue("select Auth_ID,Auth_Name from tbl_Auth");
@@ -45,6 +49,11 @@ namespace Official_Journal
             cmb_Dep.DisplayMember = "Dep_Name";
             cmb_Dep.ValueMember = "Dep_ID";
             cmb_Dep.SelectedIndex = -1;
+            //
+            dgv_LawDep.Rows.Clear();
+            //
+            //txt_LawNo.Clear();
+            //txt_Year.Text = ".";
         }
         public void ResetLawDetails()
         {
@@ -58,7 +67,7 @@ namespace Official_Journal
             gb_LawDetails.Enabled = true;
             gb_Dep.Enabled =false;
             gb_Desc.Enabled =false;
-            pnl_Lawbtn.Enabled =false;
+           // pnl_Lawbtn.Enabled =false;
         }
         //-------------------Load---------------------------
         private void frm_AddIssue_Load(object sender, EventArgs e)
@@ -258,6 +267,23 @@ namespace Official_Journal
             gb_Laws.Enabled = true;
         }
 
+        private void btn_DeleteIssue_Click(object sender, EventArgs e)
+        {
+            DialogResult R = MSG.AskDeleteMessage(); ;
+            if (R==DialogResult.Yes)
+            {
+                ISS.deleteIssue(txt_IssueNo.Text, Spin_Year.Text);
+                btn_NewIssue_Click(sender,e);
+                MSG.DeleteMessage();
+            }
+            return;
+        }
+
+        private void btn_EditeIssue_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //------------------Actions-------------------------
         private void txt_IssueNo_TextChanged(object sender, EventArgs e)
         {
@@ -310,13 +336,40 @@ namespace Official_Journal
 
         private void dgv_Law_DoubleClick(object sender, EventArgs e)
         {
+            btn_AddAuth.Enabled = false;
+            grid_Law.Enabled = false;
+            gb_Issue.Enabled = false;
+            // txt_Desc.Clear();
             txt_LawNo.Text=dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
             txt_IDLaw.Text=dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
             dtp_LawIssueDate.Text = dgv_Law.GetFocusedRowCellValue("تاريخ الاصدار").ToString();
             cmb_Auth.Text = dgv_Law.GetFocusedRowCellValue("جهة الاصدار").ToString();
             //ينطبق ولا ينطبق
-
+            if (dgv_Law.GetFocusedRowCellValue("Law_ok").ToString() == "لا ينطبق")
+            {
+                rb_N.Checked = true;
+                txt_Desc.Text = dgv_Law.GetFocusedRowCellValue("Law_Desc").ToString();
+            }
+            else 
+            {
+                rb_Y.Checked = true;
+                txt_Desc.Text = dgv_Law.GetFocusedRowCellValue("Law_Desc").ToString();
+            }
             //الجهة المعنية
+            DataTable dt = DAC.SelectQue("SELECT *  FROM VW_LawDep where [Law_No]='"+txt_LawNo.Text+"' and [Issue_No]='"+txt_IssueNo.Text+"' and [Issue_Year]='"+txt_Year.Text+"'");
+            dgv_LawDep.Rows.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                int rowIndex = dgv_LawDep.Rows.Add();
+                dgv_LawDep.Rows[rowIndex].Cells[0].Value = row[0];
+                dgv_LawDep.Rows[rowIndex].Cells[1].Value = row[1];
+            }
+            btn_EditeLaw.Enabled = true;
+            btn_DeleteLaw.Enabled = true;
+            btn_SaveLaw.Enabled = false;
+            btn_CancelLaw.Enabled = false;
+
         }
+
     }
 }
