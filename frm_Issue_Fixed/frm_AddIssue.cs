@@ -32,46 +32,12 @@ namespace Official_Journal
         byte[] IssueFile;
         private bool _isExistingIssue = false;
         private bool _loadingLaw = false;
-        public void GetLaws()
-        {
-            grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
-            dgv_Law.Columns[0].Visible=false;
-            dgv_Law.Columns[6].Visible = false;
-            dgv_Law.Columns[8].Visible = false;
-            dgv_Law.Columns[9].Visible = false;
 
-            gb_Laws.Enabled = true;
-            //
-            cmb_Auth.DataSource = DAC.SelectQue("select Auth_ID,Auth_Name from tbl_Auth");
-            cmb_Auth.DisplayMember = "Auth_Name";
-            cmb_Auth.ValueMember = "Auth_ID";
-            cmb_Auth.SelectedIndex = -1;
-            //
-            cmb_Dep.DataSource = DAC.SelectQue("select Dep_ID,Dep_Name from tbl_Department");
-            cmb_Dep.DisplayMember = "Dep_Name";
-            cmb_Dep.ValueMember = "Dep_ID";
-            cmb_Dep.SelectedIndex = -1;
-            //
-           // dgv_LawDep.Rows.Clear();
-            //
-            //txt_LawNo.Clear();
-            //txt_Year.Text = ".";
-        }
-        public void ResetLawDetails()
+        private void UpdateIssueID()
         {
-            txt_IDLaw.Clear();
-            txt_LawNo.Clear();
-            txt_LawYear.Clear();
-            txt_Desc.Clear();
-            cmb_Auth.SelectedIndex=-1;  
-            cmb_Dep.SelectedIndex=-1;
-            dgv_LawDep.Rows.Clear();
-            gb_LawDetails.Enabled = true;
-            txt_Desc.Enabled = false;
-            gb_Dep.Enabled =false;
-            gb_Desc.Enabled =false;
-           // pnl_Lawbtn.Enabled =false;
+            txt_IssueID.Text = $"عدد {txt_IssueNo.Text} لسنة {Spin_Year.Text}";
         }
+
         private void SetIssueMode(bool existingIssue)
         {
             _isExistingIssue = existingIssue;
@@ -120,6 +86,56 @@ namespace Official_Journal
             btn_SaveLaw.Enabled = false;
             btn_CancelLaw.Enabled = false;
         }
+
+        public void GetLaws()
+        {
+            UpdateIssueID();
+
+            DataTable laws = DAC.SelectQue(
+                "select * from Vw_Laws where [كود العدد]=N'" +
+                txt_IssueID.Text.Replace("'", "''") +
+                "' Order by [كود العدد] desc");
+
+            grid_Law.DataSource = laws;
+
+            if (dgv_Law.Columns.Count > 0) dgv_Law.Columns[0].Visible = false;
+            if (dgv_Law.Columns.Count > 6) dgv_Law.Columns[6].Visible = false;
+            if (dgv_Law.Columns.Count > 8) dgv_Law.Columns[8].Visible = false;
+            if (dgv_Law.Columns.Count > 9) dgv_Law.Columns[9].Visible = false;
+
+            gb_Laws.Enabled = true;
+
+            cmb_Auth.DataSource = DAC.SelectQue("select Auth_ID,Auth_Name from tbl_Auth");
+            cmb_Auth.DisplayMember = "Auth_Name";
+            cmb_Auth.ValueMember = "Auth_ID";
+            cmb_Auth.SelectedIndex = -1;
+
+            cmb_Dep.DataSource = DAC.SelectQue("select Dep_ID,Dep_Name from tbl_Department");
+            cmb_Dep.DisplayMember = "Dep_Name";
+            cmb_Dep.ValueMember = "Dep_ID";
+            cmb_Dep.SelectedIndex = -1;
+
+            // لا نمسح dgv_LawDep هنا؛ هذا الجريد خاص بالقانون المحدد.
+            // يتم تحميله عند DoubleClick على القانون.
+        }
+
+        public void ResetLawDetails()
+        {
+            _loadingLaw = true;
+            txt_IDLaw.Clear();
+            txt_LawNo.Clear();
+            txt_LawYear.Clear();
+            txt_Desc.Text = "لا ينطبق";
+            cmb_Auth.SelectedIndex = -1;
+            cmb_Dep.SelectedIndex = -1;
+            dgv_LawDep.Rows.Clear();
+            rb_N.Checked = true;
+            _loadingLaw = false;
+
+            txt_Desc.Enabled = false;
+            gb_Dep.Enabled = false;
+            gb_Desc.Enabled = false;
+        }
         //-------------------Load---------------------------
         private void frm_AddIssue_Load(object sender, EventArgs e)
         {
@@ -129,7 +145,7 @@ namespace Official_Journal
         //-------------------Buttons-----------------------
         private void btn_SearchIssue_Click(object sender, EventArgs e)
         {
-            frm_Search frm = new frm_Search();
+            frm_Search frm = new frm_Search(this);
             frm.ShowDialog();
         }
 
@@ -148,19 +164,9 @@ namespace Official_Journal
                         txt_Path.Text, IssueFile, "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, Desc, txt_IssueID.Text);
                     MSG.InsertMessage();
                     gb_LawDetails.Enabled = false;
-                   // gb_Laws.Enabled = true;
-                    GetLaws();
                     txt_LawYear.Text = Spin_Year.Text;
-                    txt_IssueID.Enabled = false;
-                    txt_IssueNo.Enabled = false;
-                    Spin_Year.Enabled = false;
-                    dtp_PublishDate.Enabled = false;
-                    dtp_SaveDate.Enabled = false;
-                    btn_AddFile.Enabled = false;
-                    btn_EditeIssue.Enabled = true;
-                    btn_DeleteIssue.Enabled = true;
-                    btn_CancelIssue.Enabled = true;
-                    btn_SaveIssue.Enabled = false;
+                    SetIssueMode(true);
+                    GetLaws();
                 }
             }
         }
@@ -171,10 +177,11 @@ namespace Official_Journal
             OFD.Filter = "PDF|*.pdf";
             if (OFD.ShowDialog() == DialogResult.OK)
             {
-                FileStream FS = new FileStream(OFD.FileName, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(FS);
-                IssueFile = br.ReadBytes((int)FS.Length);
-                //txt_Path.Text = OFD.FileName;
+                using (FileStream FS = new FileStream(OFD.FileName, FileMode.Open, FileAccess.Read))
+                using (BinaryReader br = new BinaryReader(FS))
+                {
+                    IssueFile = br.ReadBytes((int)FS.Length);
+                }
                 txt_Path.Text = Path.GetFullPath(OFD.FileName);
             }
         }
@@ -184,16 +191,23 @@ namespace Official_Journal
             gb_Issue.Enabled = false;
             gb_LawDetails.Enabled = true;
             gb_Laws.Enabled = false;
+            btn_AddAuth.Enabled = true;
+            cmb_Auth.Enabled = true;
+            dtp_LawIssueDate.Enabled = true;
+            btn_SearchAuth.Enabled = true;
             txt_LawYear.Text = Spin_Year.Text;
             txt_IDLaw.Clear();
             txt_LawNo.Clear();
             cmb_Auth.SelectedIndex = -1;
-            rb_Y.Checked = true;
-            txt_Desc.Text = "لا ينطبق";
-            txt_Desc.Enabled = false;
-            cmb_Auth.SelectedIndex = -1;
-            gb_Dep.Enabled = false;
+            cmb_Dep.SelectedIndex = -1;
             dgv_LawDep.Rows.Clear();
+
+            _loadingLaw = true;
+            rb_Y.Checked = true;
+            _loadingLaw = false;
+            txt_Desc.Text = "";
+            txt_Desc.Enabled = true;
+            gb_Dep.Enabled = true;
             Law_Add_Upd = 0;
             btn_EditeLaw.Enabled = false;
             btn_DeleteLaw.Enabled = false;
@@ -203,71 +217,70 @@ namespace Official_Journal
 
         private void btn_NewIssue_Click(object sender, EventArgs e)
         {
-            this.btn_CancelLaw_Click(sender, e);
+            // إلغاء أي حالة سابقة للقانون أولاً
+            gb_LawDetails.Enabled = false;
+            pnl_Lawbtn.Enabled = false;
+            btn_SaveLaw.Enabled = false;
+            btn_CancelLaw.Enabled = false;
+            dgv_LawDep.Rows.Clear();
+
             txt_IssueNo.Clear();
             txt_ID.Clear();
-            Spin_Year.Text = "2026";
+            Spin_Year.Text = DateTime.Now.Year.ToString();
+            txt_Year.Text = Spin_Year.Text;
             txt_IssueID.Clear();
             dtp_PublishDate.Value = DateTime.Now;
             dtp_SaveDate.Value = DateTime.Now;
             txt_Path.Clear();
-            btn_SaveIssue.Enabled = true;
-            btn_EditeIssue.Enabled = false; 
-            btn_DeleteIssue.Enabled = false;
-            grid_Law.Enabled = false;
-            grid_Law.DataSource= null;
-            txt_IssueNo.Enabled=true;
-            Spin_Year.Enabled = true;
-            dtp_LawIssueDate.Enabled = true;
-            dtp_PublishDate.Enabled = true;
-            btn_AddLaw.Enabled=false;
-            btn_NewIssue.Enabled = false;
+            IssueFile = null;
+            grid_Law.DataSource = null;
+
+            SetIssueMode(false);
         }
 
         private void btn_CancelLaw_Click(object sender, EventArgs e)
         {
+            ResetLawDetails();
+
             gb_LawDetails.Enabled = false;
-            gb_Laws.Enabled = true;
+            gb_Laws.Enabled = _isExistingIssue;
             gb_Issue.Enabled = true;
             btn_SaveLaw.Enabled = false;
-            pnl_Lawbtn.Enabled = false; 
-            btn_AddFile.Enabled = true;
-            btn_NewIssue.Enabled = true;
-            btn_SaveIssue.Enabled = false;
-            btn_EditeIssue.Enabled = true;
-            btn_DeleteIssue.Enabled = true;
+            btn_CancelLaw.Enabled = false;
+            pnl_Lawbtn.Enabled = false;
+
+            // إعادة حالة العدد نفسها بدون تغييرها بسبب إلغاء القانون
+            SetIssueMode(_isExistingIssue);
         }
 
         private void btn_AddLawDep_Click(object sender, EventArgs e)
         {
+            if (cmb_Dep.SelectedValue == null || string.IsNullOrWhiteSpace(cmb_Dep.Text))
+                return;
+
+            string depId = cmb_Dep.SelectedValue.ToString();
+
             foreach (DataGridViewRow R in dgv_LawDep.Rows)
             {
                 if (R.IsNewRow) continue;
 
                 if (R.Cells[0].Value != null &&
-                    R.Cells[0].Value.ToString() == cmb_Dep.SelectedValue.ToString())
+                    R.Cells[0].Value.ToString() == depId)
                 {
                     MSG.Exception("تم إضافة هذه الجهة الرسمية من قبل");
                     return;
                 }
             }
+
             int rowIndex = dgv_LawDep.Rows.Add();
-            if (cmb_Dep.Text!="")
-            {
-                dgv_LawDep.Rows[rowIndex].Cells[1].Value = cmb_Dep.Text;
-                dgv_LawDep.Rows[rowIndex].Cells[0].Value = cmb_Dep.SelectedValue.ToString();
-            }
-            else
-            {
-                return;
-            }
-
-
+            dgv_LawDep.Rows[rowIndex].Cells[0].Value = depId;
+            dgv_LawDep.Rows[rowIndex].Cells[1].Value = cmb_Dep.Text;
         }
 
         private void btn_DelLawDep_Click(object sender, EventArgs e)
         {
-            dgv_LawDep.Rows.RemoveAt(dgv_LawDep.CurrentRow.Index);
+            if (dgv_LawDep.CurrentRow != null && !dgv_LawDep.CurrentRow.IsNewRow)
+                dgv_LawDep.Rows.RemoveAt(dgv_LawDep.CurrentRow.Index);
         }
 
         private void btn_SaveLaw_Click(object sender, EventArgs e)
@@ -305,10 +318,16 @@ namespace Official_Journal
                                 , "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, $"الجهة المعنية :{R.Cells[1].Value.ToString()}", $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
                         }
                     }
-                    btn_SaveLaw.Enabled = false;
-                    btn_CancelLaw.Enabled = false;
                     GetLaws();
                     ResetLawDetails();
+
+                    gb_LawDetails.Enabled = false;
+                    gb_Laws.Enabled = true;
+                    gb_Issue.Enabled = true;
+                    pnl_Lawbtn.Enabled = false;
+                    btn_SaveLaw.Enabled = false;
+                    btn_CancelLaw.Enabled = false;
+                    SetIssueMode(true);
                 }
                 else
                 {
@@ -329,10 +348,7 @@ namespace Official_Journal
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            grid_Law.DataSource = DAC.SelectQue("select * from Vw_Laws where [كود العدد]=N'" + txt_IssueID.Text + "'Order by [كود العدد] desc");
-            dgv_Law.Columns[0].Visible = false;
-            dgv_Law.Columns[6].Visible = false;
-            gb_Laws.Enabled = true;
+            GetLaws();
         }
 
         private void btn_DeleteIssue_Click(object sender, EventArgs e)
@@ -355,11 +371,13 @@ namespace Official_Journal
         //------------------Actions-------------------------
         private void txt_IssueNo_TextChanged(object sender, EventArgs e)
         {
-            txt_IssueID.Text = "عدد " + txt_IssueNo.Text + " لسنة " + Spin_Year.Text;
+            UpdateIssueID();
         }
 
         private void rb_Y_CheckedChanged(object sender, EventArgs e)
         {
+            if (_loadingLaw) return;
+
             if (rb_Y.Checked == true)
             {
                 txt_Desc.Enabled = true;
@@ -370,6 +388,8 @@ namespace Official_Journal
 
         private void rb_N_CheckedChanged(object sender, EventArgs e)
         {
+            if (_loadingLaw) return;
+
             if (rb_N.Checked == true)
             {
                 if (txt_Desc.Text != ""||dgv_LawDep.RowCount>0)
@@ -404,9 +424,22 @@ namespace Official_Journal
 
         private void dgv_Law_DoubleClick(object sender, EventArgs e)
         {
-            btn_AddAuth.Enabled = false;
-            grid_Law.Enabled = true;
+            if (dgv_Law.FocusedRowHandle < 0)
+                return;
+
+            object lawNoValue = dgv_Law.GetFocusedRowCellValue("رقم القانون");
+            if (lawNoValue == null || lawNoValue == DBNull.Value)
+                return;
+
+            string lawNo = lawNoValue.ToString();
+            string lawOk = Convert.ToString(dgv_Law.GetFocusedRowCellValue("Law_ok"));
+            string lawDesc = Convert.ToString(dgv_Law.GetFocusedRowCellValue("Law_Desc"));
+
             gb_Issue.Enabled = false;
+            gb_Laws.Enabled = true;
+            gb_LawDetails.Enabled = true;
+
+            btn_AddAuth.Enabled = false;
             cmb_Auth.Enabled = false;
             dtp_LawIssueDate.Enabled = false;
             btn_SearchAuth.Enabled = false;
@@ -415,27 +448,28 @@ namespace Official_Journal
             btn_SaveLaw.Enabled = false;
             btn_CancelLaw.Enabled = true;
 
-            // txt_Desc.Clear();
-            txt_LawNo.Text = dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
-            txt_IDLaw.Text = dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
-            dtp_LawIssueDate.Text = dgv_Law.GetFocusedRowCellValue("تاريخ الاصدار").ToString();
-            cmb_Auth.Text = dgv_Law.GetFocusedRowCellValue("جهة الاصدار").ToString();
-
-            //ينطبق ولا ينطبق
-            if (dgv_Law.GetFocusedRowCellValue("Law_ok").ToString() == "لا ينطبق")
-            {
+            txt_LawNo.Text = lawNo;
+            txt_IDLaw.Text = lawNo;
+            dtp_LawIssueDate.Text = Convert.ToString(dgv_Law.GetFocusedRowCellValue("تاريخ الاصدار"));
+            cmb_Auth.Text = Convert.ToString(dgv_Law.GetFocusedRowCellValue("جهة الاصدار"));
+            _loadingLaw = true;
+            txt_Desc.Text = lawDesc;
+            if (lawOk == "لا ينطبق")
                 rb_N.Checked = true;
-                txt_Desc.Text = dgv_Law.GetFocusedRowCellValue("Law_Desc").ToString();
-            }
             else
-            {
                 rb_Y.Checked = true;
-                txt_Desc.Text = dgv_Law.GetFocusedRowCellValue("Law_Desc").ToString();
-            }
+            _loadingLaw = false;
 
-            //الجهة المعنية
-            DataTable dt = DAC.SelectQue("SELECT *  FROM VW_LawDep where [Law_No]='" + txt_LawNo.Text + "' and [Issue_No]='" + txt_IssueNo.Text + "' and [Issue_Year]='" + txt_Year.Text + "'");
+            txt_Desc.Enabled = lawOk != "لا ينطبق";
+            gb_Dep.Enabled = lawOk != "لا ينطبق";
+
+            DataTable dt = DAC.SelectQue(
+                "SELECT * FROM VW_LawDep WHERE [Law_No]='" + lawNo.Replace("'", "''") +
+                "' AND [Issue_No]='" + txt_IssueNo.Text.Replace("'", "''") +
+                "' AND [Issue_Year]='" + txt_Year.Text.Replace("'", "''") + "'");
+
             dgv_LawDep.Rows.Clear();
+
             foreach (DataRow row in dt.Rows)
             {
                 int rowIndex = dgv_LawDep.Rows.Add();

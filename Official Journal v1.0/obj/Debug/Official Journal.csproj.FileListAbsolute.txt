@@ -191,9 +191,13 @@ E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Add_Department.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Add_IssuingAuthorities.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Cn.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Login.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Main.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Publish.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Search.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_SearchAll.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_UserLogin.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Users.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_User_SuperAdmin.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.Properties.Resources.resources
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official Journal.csproj.GenerateResource.cache
@@ -202,7 +206,3 @@ E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official.4E0C6243.Up2Date
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official Journal.exe
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official Journal.pdb
-E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Login.resources
-E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Users.resources
-E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Search.resources
-E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Publish.resources

@@ -446,6 +446,7 @@
             this.grid_Law.TabIndex = 0;
             this.grid_Law.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgv_Law});
+            this.grid_Law.DoubleClick += new System.EventHandler(this.grid_Law_DoubleClick);
             // 
             // dgv_Law
             // 
