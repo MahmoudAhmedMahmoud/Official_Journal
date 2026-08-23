@@ -45,9 +45,9 @@ namespace Official_Journal
                 frm.btn_SaveIssue.Enabled = false;
                 frm.btn_EditeIssue.Enabled = true;
                 frm.btn_DeleteIssue.Enabled = true;
-                frm.gb_Laws.Enabled = true;
                 frm.btn_AddFile.Enabled = false;
                 frm.GetLaws();
+                frm.gb_Laws.Enabled = true;
                 this.Close();
             }
             return;

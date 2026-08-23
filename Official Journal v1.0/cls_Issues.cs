@@ -83,15 +83,25 @@ namespace Official_Journal
             DAC.CnClose();
         }
 
-        public void deleteIssue(string Issue_No, string Issue_Year)
+        public void DeleteIssue(string Issue_No, string Issue_Year , string Model_Type, string Action_Type, string User_ID, string Tran_Describe, string Link_ID)
         {
-            SqlParameter[] Par = new SqlParameter[2];
+            SqlParameter[] Par = new SqlParameter[7];
             Par[0] = new SqlParameter("@Issue_No", SqlDbType.NVarChar, 50);
             Par[0].Value = Issue_No;
             Par[1] = new SqlParameter("@Issue_Year", SqlDbType.NVarChar, 50);
             Par[1].Value = Issue_Year;
+            Par[2] = new SqlParameter("@Model_Type", SqlDbType.NVarChar, 50);
+            Par[2].Value = Model_Type;
+            Par[3] = new SqlParameter("@Action_Type", SqlDbType.NVarChar, 50);
+            Par[3].Value = Action_Type;
+            Par[4] = new SqlParameter("@User_ID", SqlDbType.NVarChar, 50);
+            Par[4].Value = User_ID;
+            Par[5] = new SqlParameter("@Tran_Describe", SqlDbType.NVarChar, 50);
+            Par[5].Value = Tran_Describe;
+            Par[6] = new SqlParameter("@Link_ID", SqlDbType.NVarChar, 50);
+            Par[6].Value = Link_ID;
             DAC.CnOpen();
-            DAC.ExcCmd("SP_DeleteIssue", Par);
+            DAC.ExcCmd("Sp_DelIssue", Par);
             DAC.CnClose();
         }
 
