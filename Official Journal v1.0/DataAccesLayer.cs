@@ -15,18 +15,18 @@ namespace Official_Journal
     class DataAccesLayer
     {
         SqlConnection Cn = new SqlConnection();
-        string Server, DataBase, User, Password;
+        //string Server, DataBase, User, Password;
 
         public DataAccesLayer()
         {
              // Server = Properties.Settings.Default.Server;
-            Server = "192.168.1.50"; //"196.202.64.114";
-            //  DataBase = Properties.Settings.Default.Database;
-            DataBase = "QODS_DB";
-            //  User = Properties.Settings.Default.UserName;
-            User = "sa";
-            //  Password = Properties.Settings.Default.Password;
-            Password = "ghhgihghhggi";
+            //Server = "192.168.1.50"; //"196.202.64.114";
+            ////  DataBase = Properties.Settings.Default.Database;
+            //DataBase = "QODS_DB";
+            ////  User = Properties.Settings.Default.UserName;
+            //User = "sa";
+            ////  Password = Properties.Settings.Default.Password;
+            //Password = "ghhgihghhggi";
            // Cn = new SqlConnection("Server="+Server+";DataBase="+DataBase+";Uid="+User+";Pwd="+Password+";");
             //Cn = new SqlConnection(Properties.Settings.Default.CNstring);
 

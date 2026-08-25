@@ -68,8 +68,8 @@ namespace Official_Journal
             dgv_LawDep.Rows.Clear();
             gb_LawDetails.Enabled = true;
             txt_Desc.Enabled = false;
-            gb_Dep.Enabled =false;
-            gb_Desc.Enabled =false;
+            //gb_Dep.Enabled =false;
+            //gb_Desc.Enabled =false;
             dtp_LawIssueDate.Value = DateTime.Now;
         }
         private void SetIssueMode(bool existingIssue)
@@ -163,6 +163,32 @@ namespace Official_Journal
                     btn_SaveIssue.Enabled = false;
                     btn_NewIssue.Enabled = true;
                 }
+                else
+                {
+                    DialogResult R=MSG.AskUpdateMessage();
+                    if (R==DialogResult.Yes)
+                    {
+                        ISS.UpdateIssue(txt_IssueNo.Text, Spin_Year.Text, txt_IssueID.Text, dtp_PublishDate.Value, dtp_SaveDate.Value,
+                             txt_Path.Text, IssueFile, "اعداد الجريدة", "تعديل", Properties.Settings.Default.UserID, Desc, txt_IssueID.Text, txt_IssueID.Text, txt_Year.Text);
+                        MSG.Updatemessage();
+                        gb_LawDetails.Enabled = false;
+                        GetLaws();
+                        txt_LawYear.Text = Spin_Year.Text;
+                        txt_IssueID.Enabled = false;
+                        txt_IssueNo.Enabled = false;
+                        Spin_Year.Enabled = false;
+                        dtp_PublishDate.Enabled = false;
+                        dtp_SaveDate.Enabled = false;
+                        btn_AddFile.Enabled = false;
+                        btn_EditeIssue.Enabled = true;
+                        btn_DeleteIssue.Enabled = true;
+                        btn_CancelIssue.Enabled = false;
+                        btn_AddLaw.Enabled = true;
+                        btn_SaveIssue.Enabled = false;
+                        btn_NewIssue.Enabled = true;
+                    }
+                    return;
+                }
             }
         }
 
@@ -196,6 +222,8 @@ namespace Official_Journal
             pnl_Lawbtn.Enabled = true;
             btn_SaveLaw.Enabled = true;
             btn_CancelLaw.Enabled = true;
+            gb_Desc.Enabled = true;
+            txt_LawYear.Text = Spin_Year.Text;
 
             // enable event check box
             rb_Y.CheckedChanged += rb_Y_CheckedChanged;
@@ -224,7 +252,6 @@ namespace Official_Journal
             dtp_SaveDate.Enabled = true;
             btn_NewIssue.Enabled = false;
 
-
             //gb Law Details
 
                  //cancel event check box
@@ -233,14 +260,16 @@ namespace Official_Journal
            
             ResetLawDetails();
 
-            // enable event check box
+                // enable event check box
             rb_Y.CheckedChanged += rb_Y_CheckedChanged;
             rb_N.CheckedChanged += rb_N_CheckedChanged;
 
+            gb_LawDetails.Enabled = false;
         }
 
         private void btn_CancelLaw_Click(object sender, EventArgs e)
         {
+            ResetLawDetails();
             //
             gb_LawDetails.Enabled = false;
             gb_Laws.Enabled = true;
@@ -315,35 +344,92 @@ namespace Official_Journal
                     }
                         ISS.AddLaw(txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}", dtp_LawIssueDate.Value, int.Parse(cmb_Auth.SelectedValue.ToString()),
     
-                            Law_Ok, txt_Desc.Text, "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                            Law_Ok, txt_Desc.Text, "قانون", "اضافة", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
                     if (dgv_LawDep.RowCount > 0)
                     {
                         foreach (DataGridViewRow R in dgv_LawDep.Rows)
                         {
                             ISS.AddLawDep(R.Cells[0].Value.ToString(), txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text
-                                , "اعداد الجريدة", "اضافة", Properties.Settings.Default.UserID, $"الجهة المعنية :{R.Cells[1].Value.ToString()}", $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                                , "قانون", "اضافة", Properties.Settings.Default.UserID, $"الجهة المعنية :{R.Cells[1].Value.ToString()}", $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
                         }
                     }
                     btn_SaveLaw.Enabled = false;
                     btn_CancelLaw.Enabled = false;
                     GetLaws();
                     ResetLawDetails();
+                    gb_Issue.Enabled = true;
+                    gb_LawDetails.Enabled = false;
                 }
                 else
                 {
-                    //
+                    string Desc = $"رقم القانون: {txt_LawNo.Text}-سنة:{txt_LawYear.Text}- تاريخ الاصدار:{dtp_LawIssueDate.Text}- جهة الاصدار:{cmb_Auth.Text}- مضمون القرار:{txt_Desc.Text}";
+                    string Law_Ok;
+                    if (rb_N.Checked)
+                    {
+                        Law_Ok = "لا ينطبق";
+                    }
+                    else
+                    {
+                        Law_Ok = "ينطبق";
+                    }
+                    ISS.UpdLaw(txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}", dtp_LawIssueDate.Value, int.Parse(cmb_Auth.SelectedValue.ToString()),
+                    Law_Ok, txt_Desc.Text, "قانون", "تعديل", Properties.Settings.Default.UserID, Desc, $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}",txt_IDLaw.Text);
+                    DAC.ExcQue("delete from tbl_LawDep where Law_No=N'"+txt_LawNo.Text+"'");
+                    if (dgv_LawDep.RowCount > 0)
+                    {
+                        foreach (DataGridViewRow R in dgv_LawDep.Rows)
+                        {
+                            ISS.AddLawDep(R.Cells[0].Value.ToString(), txt_LawNo.Text, txt_IssueNo.Text, Spin_Year.Text
+                                , "قانون", "اضافة", Properties.Settings.Default.UserID, $"الجهة المعنية :{R.Cells[1].Value.ToString()}", $"قانون رقم {txt_LawNo.Text} لسنة {txt_LawYear.Text}");
+                        }
+                    }
+                    btn_SaveLaw.Enabled = false;
+                    btn_CancelLaw.Enabled = false;
+                    GetLaws();
+                    ResetLawDetails();
+                    gb_Issue.Enabled = true;
+                    gb_LawDetails.Enabled = false;
                 }
             }
         }
 
         private void btn_DeleteLaw_Click(object sender, EventArgs e)
         {
+            DialogResult R = MSG.AskDeleteMessage();
+            if (R == DialogResult.Yes)
+            {
+                DAC.ExcQue("delete from tbl_Laws where Law_No=N'" + txt_LawNo.Text + "' and Issue_Year=N'"+txt_LawYear.Text+"'");
+                MSG.DeleteMessage();
+                GetLaws();
+                ResetLawDetails();
+                //
+                gb_LawDetails.Enabled = false;
+                gb_Laws.Enabled = true;
+                gb_Issue.Enabled = true;
+                btn_SaveLaw.Enabled = false;
 
+                // pnl_Lawbtn.Enabled = false; 
+                btn_AddFile.Enabled = true;
+                btn_NewIssue.Enabled = true;
+                btn_SaveIssue.Enabled = false;
+                btn_EditeIssue.Enabled = true;
+                btn_DeleteIssue.Enabled = true;
+                btn_CancelLaw.Enabled = false;
+                pnl_Lawbtn.Enabled = false;
+            }
+            return;
         }
 
         private void btn_EditeLaw_Click(object sender, EventArgs e)
         {
-
+            Law_Add_Upd = 1;
+            gb_Issue.Enabled = false;
+            gb_Laws.Enabled = false;
+            gb_LawDetails.Enabled = true;
+            btn_SaveLaw.Enabled = true;
+            btn_EditeLaw.Enabled = false;
+            btn_DeleteLaw.Enabled = false;
+            btn_CancelLaw.Enabled=true;
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
@@ -369,7 +455,14 @@ namespace Official_Journal
 
         private void btn_EditeIssue_Click(object sender, EventArgs e)
         {
-
+            Add_UPd = 1;
+            btn_EditeIssue.Enabled = false;
+            btn_SaveIssue.Enabled = true;
+            btn_CancelIssue.Enabled = true;
+            btn_NewIssue.Enabled = false;
+            btn_SearchIssue.Enabled = false;
+            gb_Laws.Enabled = false;
+            gb_LawDetails.Enabled = false;
         }
 
         //------------------Actions-------------------------
@@ -438,6 +531,7 @@ namespace Official_Journal
                 txt_IDLaw.Text = dgv_Law.GetFocusedRowCellValue("رقم القانون").ToString();
                 dtp_LawIssueDate.Text = dgv_Law.GetFocusedRowCellValue("تاريخ الاصدار").ToString();
                 cmb_Auth.Text = dgv_Law.GetFocusedRowCellValue("جهة الاصدار").ToString();
+                txt_LawYear.Text = Spin_Year.Text;
 
                 //cancel event check box
                 rb_Y.CheckedChanged -= rb_Y_CheckedChanged;
