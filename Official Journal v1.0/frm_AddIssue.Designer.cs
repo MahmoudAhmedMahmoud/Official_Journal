@@ -209,6 +209,7 @@
             this.Spin_Year.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Spin_Year.Size = new System.Drawing.Size(76, 20);
             this.Spin_Year.TabIndex = 1;
+            this.Spin_Year.EditValueChanged += new System.EventHandler(this.Spin_Year_EditValueChanged);
             // 
             // btn_SaveIssue
             // 

@@ -36,7 +36,7 @@
             this.dtp_PubDate = new System.Windows.Forms.DateTimePicker();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.cmb_ = new System.Windows.Forms.ComboBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.cmb_Dep = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.cmb_Auth = new System.Windows.Forms.ComboBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -65,7 +65,7 @@
             this.groupControl1.Controls.Add(this.dtp_PubDate);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.cmb_);
-            this.groupControl1.Controls.Add(this.cmbDepartment);
+            this.groupControl1.Controls.Add(this.cmb_Dep);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.cmb_Auth);
             this.groupControl1.Controls.Add(this.labelControl8);
@@ -146,21 +146,24 @@
             this.cmb_.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmb_.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.cmb_.FormattingEnabled = true;
+            this.cmb_.Items.AddRange(new object[] {
+            "ينطبق",
+            "لا ينطبق"});
             this.cmb_.Location = new System.Drawing.Point(96, 54);
             this.cmb_.Name = "cmb_";
             this.cmb_.Size = new System.Drawing.Size(112, 21);
             this.cmb_.TabIndex = 12;
             // 
-            // cmbDepartment
+            // cmb_Dep
             // 
-            this.cmbDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDepartment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbDepartment.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(96, 94);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(231, 21);
-            this.cmbDepartment.TabIndex = 12;
+            this.cmb_Dep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Dep.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_Dep.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.cmb_Dep.FormattingEnabled = true;
+            this.cmb_Dep.Location = new System.Drawing.Point(96, 94);
+            this.cmb_Dep.Name = "cmb_Dep";
+            this.cmb_Dep.Size = new System.Drawing.Size(231, 21);
+            this.cmb_Dep.TabIndex = 12;
             // 
             // labelControl3
             // 
@@ -199,7 +202,7 @@
             // 
             this.spin_Year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.spin_Year.EditValue = new decimal(new int[] {
-            0,
+            2026,
             0,
             0,
             0});
@@ -274,7 +277,7 @@
             this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Search.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_Search.Appearance.Options.UseFont = true;
-            this.btn_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.btn_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.ImageOptions.Image")));
             this.btn_Search.Location = new System.Drawing.Point(14, 94);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(60, 23);
@@ -328,6 +331,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "بحث القوانين";
+            this.Load += new System.EventHandler(this.frm_SearchAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -350,7 +354,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.ComboBox cmb_Auth;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.ComboBox cmb_Dep;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.DateTimePicker dtp_PubDate;
         private DevExpress.XtraEditors.LabelControl labelControl6;

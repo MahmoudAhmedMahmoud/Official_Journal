@@ -18,6 +18,7 @@ namespace Official_Journal
             InitializeComponent();
         }
         DataAccesLayer DAC = new DataAccesLayer();
+        cls_Issues ISS = new cls_Issues();
         private void frm_Search_Load(object sender, EventArgs e)
         {
             grid_Search.DataSource=DAC.SelectQue("SELECT * FROM VW_SelectAllIssues");
@@ -34,7 +35,8 @@ namespace Official_Journal
                 frm.Spin_Year.Enabled = false;
                 frm.txt_IssueNo.Text = dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString();
                 frm.txt_IssueNo.Enabled = false;
-                frm.txt_ID.Text = "عدد " + frm.txt_IssueNo.Text + " لسنة " + frm.Spin_Year.Text;
+                frm.txt_IssueID.Text = "عدد " + frm.txt_IssueNo.Text + " لسنة " + frm.Spin_Year.Text;
+                frm.txt_ID.Text= dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString();
                 frm.txt_Year.Text = dgv_Search.GetFocusedRowCellValue("السنة").ToString();
                 frm.dtp_PublishDate.Text = dgv_Search.GetFocusedRowCellValue("تاريخ النشر").ToString();
                 frm.dtp_PublishDate.Enabled = false;
@@ -48,6 +50,10 @@ namespace Official_Journal
                 frm.btn_AddFile.Enabled = false;
                 frm.GetLaws();
                 frm.gb_Laws.Enabled = true;
+                //
+                DataTable dt = ISS.GetIssueFile(dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString(), dgv_Search.GetFocusedRowCellValue("السنة").ToString());
+                frm.IssueFile = (byte[])dt.Rows[0]["الملف"];
+                //
                 this.Close();
             }
             return;

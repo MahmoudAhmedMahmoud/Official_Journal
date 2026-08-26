@@ -33,7 +33,7 @@ namespace Official_Journal
 
         public void GetNotPub()
         {
-           grid_NotPub.DataSource= DAC.SelectQue("SELECT * FROM VW_IssuePub WHERE [حالة التوزيع] = 0");
+            grid_NotPub.DataSource= DAC.SelectQue("SELECT * FROM VW_IssuePub WHERE [حالة التوزيع] = 0");
             dgv_NotPub.Columns[5].Visible = false;
             dgv_NotPub.Columns[6].Visible = false;
             dgv_NotPub.RefreshData();
@@ -47,19 +47,9 @@ namespace Official_Journal
             GetNotPub();
         }
         //-------------------------------------------------------
-        private void page_Pub_Click(object sender, EventArgs e)
-        {
-            GetPub();
-        }
-
-        private void page_NotPub_Click(object sender, EventArgs e)
-        {
-            GetNotPub();
-        }
-
         private void btn_NotPub_Click(object sender, EventArgs e)
         {
-            if (dgv_Pub.GetSelectedRows().Length>=0)
+            if (dgv_Pub.GetSelectedRows().Length>0)
             {
                 foreach (int R in dgv_Pub.GetSelectedRows())
                 {
@@ -77,7 +67,7 @@ namespace Official_Journal
 
         private void btn_Pub_Click(object sender, EventArgs e)
         {
-            if (dgv_NotPub.GetSelectedRows().Length>=0)
+            if (dgv_NotPub.GetSelectedRows().Length>0)
             {
                 foreach (int R in dgv_NotPub.GetSelectedRows())
                 {

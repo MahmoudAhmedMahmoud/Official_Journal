@@ -105,16 +105,18 @@ namespace Official_Journal
             DAC.CnClose();
         }
 
-        public void GetIssueFile(string Issue_No, string Issue_Year)
+        public DataTable GetIssueFile(string Issue_No, string Issue_Year)
         {
+            DataTable Dt = new DataTable();
             SqlParameter[] Par = new SqlParameter[2];
             Par[0] = new SqlParameter("@Issue_No", SqlDbType.NVarChar, 50);
             Par[0].Value = Issue_No;
             Par[1] = new SqlParameter("@Issue_Year", SqlDbType.NVarChar, 50);
             Par[1].Value = Issue_Year;
             DAC.CnOpen();
-            DAC.ExcCmd("SP_DeleteIssue", Par);
+            Dt = DAC.Select("SP_GetIssueFile", Par);
             DAC.CnClose();
+            return Dt;
         }
 
         public void AddLaw(string Law_No, string Issue_No, string Issue_Year, string Law_ID, DateTime Law_IssueDate, 

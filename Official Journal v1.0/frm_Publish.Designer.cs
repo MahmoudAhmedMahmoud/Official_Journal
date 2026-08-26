@@ -59,7 +59,7 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.page_Pub,
             this.page_NotPub});
-            this.xtraTabControl1.Click += new System.EventHandler(this.page_Pub_Click);
+            this.xtraTabControl1.Click += new System.EventHandler(this.frm_Publish_Load);
             // 
             // page_NotPub
             // 
@@ -68,7 +68,6 @@
             this.page_NotPub.Name = "page_NotPub";
             this.page_NotPub.Size = new System.Drawing.Size(777, 584);
             this.page_NotPub.Text = "الاعداد الغير موزعة";
-            this.page_NotPub.Click += new System.EventHandler(this.page_NotPub_Click);
             // 
             // btn_Pub
             // 
@@ -118,7 +117,6 @@
             this.page_Pub.Name = "page_Pub";
             this.page_Pub.Size = new System.Drawing.Size(777, 584);
             this.page_Pub.Text = "الاعداد الموزعة";
-            this.page_Pub.Click += new System.EventHandler(this.page_Pub_Click);
             // 
             // btn_NotPub
             // 
