@@ -33,7 +33,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_Note = new System.Windows.Forms.TextBox();
+            this.txt_App_Pass = new System.Windows.Forms.TextBox();
             this.txt_Dep = new System.Windows.Forms.TextBox();
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.gb_Department = new DevExpress.XtraEditors.GroupControl();
@@ -60,7 +60,7 @@
             this.gb_DepDetails.Controls.Add(this.labelControl3);
             this.gb_DepDetails.Controls.Add(this.labelControl2);
             this.gb_DepDetails.Controls.Add(this.labelControl1);
-            this.gb_DepDetails.Controls.Add(this.txt_Note);
+            this.gb_DepDetails.Controls.Add(this.txt_App_Pass);
             this.gb_DepDetails.Controls.Add(this.txt_Dep);
             this.gb_DepDetails.Controls.Add(this.txt_ID);
             this.gb_DepDetails.Dock = System.Windows.Forms.DockStyle.Top;
@@ -77,9 +77,9 @@
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(527, 76);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(41, 13);
+            this.labelControl3.Size = new System.Drawing.Size(53, 13);
             this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "ملاحظات";
+            this.labelControl3.Text = "كلمة المرور";
             // 
             // labelControl2
             // 
@@ -103,16 +103,16 @@
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "كود";
             // 
-            // txt_Note
+            // txt_App_Pass
             // 
-            this.txt_Note.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Note.Enabled = false;
-            this.txt_Note.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_Note.Location = new System.Drawing.Point(18, 73);
-            this.txt_Note.Name = "txt_Note";
-            this.txt_Note.Size = new System.Drawing.Size(503, 20);
-            this.txt_Note.TabIndex = 7;
-            this.txt_Note.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_App_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_App_Pass.Enabled = false;
+            this.txt_App_Pass.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_App_Pass.Location = new System.Drawing.Point(18, 73);
+            this.txt_App_Pass.Name = "txt_App_Pass";
+            this.txt_App_Pass.Size = new System.Drawing.Size(503, 20);
+            this.txt_App_Pass.TabIndex = 7;
+            this.txt_App_Pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_Dep
             // 
@@ -291,7 +291,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.TextBox txt_Note;
+        private System.Windows.Forms.TextBox txt_App_Pass;
         private System.Windows.Forms.TextBox txt_Dep;
         private System.Windows.Forms.TextBox txt_ID;
         private DevExpress.XtraEditors.GroupControl gb_Department;

@@ -63,6 +63,16 @@ namespace Official_Journal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Journal {
+            get {
+                object obj = ResourceManager.GetObject("Journal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Official_Journal {
             get {
                 object obj = ResourceManager.GetObject("Official_Journal", resourceCulture);

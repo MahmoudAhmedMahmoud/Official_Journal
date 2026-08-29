@@ -39,13 +39,17 @@
     <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -100,6 +104,12 @@
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PdfViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PdfViewer.Designer.cs">
+      <DependentUpon>frm_PdfViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Publish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +146,12 @@
     <Compile Include="frm_User_SuperAdmin.Designer.cs">
       <DependentUpon>frm_User_SuperAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Wait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Wait.Designer.cs">
+      <DependentUpon>frm_Wait.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_AddIssue.resx">
@@ -156,6 +172,9 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_PdfViewer.resx">
+      <DependentUpon>frm_PdfViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Publish.resx">
       <DependentUpon>frm_Publish.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_User_SuperAdmin.resx">
       <DependentUpon>frm_User_SuperAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Wait.resx">
+      <DependentUpon>frm_Wait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -203,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Journal.ico" />
+    <None Include="Resources\Journal.png" />
     <None Include="Resources\Official_Journal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

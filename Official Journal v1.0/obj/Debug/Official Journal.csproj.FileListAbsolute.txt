@@ -206,3 +206,11 @@ E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official.4E0C6243.Up2Date
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official Journal.exe
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official Journal.pdb
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\DevExpress.XtraPdfViewer.v21.2.dll
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\DevExpress.XtraPdfViewer.v21.2.xml
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\de\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\es\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\ja\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\ru\DevExpress.XtraPdfViewer.v21.2.resources.dll
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_PdfViewer.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_Wait.resources

@@ -846,6 +846,7 @@
             this.Controls.Add(this.gb_Laws);
             this.Controls.Add(this.gb_Issue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::Official_Journal.Properties.Resources.Journal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_AddIssue";

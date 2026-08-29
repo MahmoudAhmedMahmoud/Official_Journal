@@ -47,14 +47,17 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_IssueNo = new System.Windows.Forms.TextBox();
             this.btn_Search = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_OpenFile = new DevExpress.XtraEditors.SimpleButton();
             this.grid_Search = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgv_Search = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spin_Year.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -79,7 +82,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(732, 133);
+            this.groupControl1.Size = new System.Drawing.Size(732, 140);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "معايير البحث";
             // 
@@ -285,45 +288,61 @@
             this.btn_Search.Text = "بحث";
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // simpleButton1
+            // btn_OpenFile
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(631, 573);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(86, 23);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "فتح الملف";
+            this.btn_OpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_OpenFile.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btn_OpenFile.Appearance.Options.UseFont = true;
+            this.btn_OpenFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_OpenFile.ImageOptions.Image")));
+            this.btn_OpenFile.Location = new System.Drawing.Point(26, 3);
+            this.btn_OpenFile.Name = "btn_OpenFile";
+            this.btn_OpenFile.Size = new System.Drawing.Size(86, 23);
+            this.btn_OpenFile.TabIndex = 4;
+            this.btn_OpenFile.Text = "فتح الملف";
+            this.btn_OpenFile.Click += new System.EventHandler(this.btn_OpenFile_Click);
             // 
             // grid_Search
             // 
-            this.grid_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_Search.Location = new System.Drawing.Point(0, 133);
-            this.grid_Search.MainView = this.gridView1;
+            this.grid_Search.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grid_Search.Location = new System.Drawing.Point(0, 140);
+            this.grid_Search.MainView = this.dgv_Search;
             this.grid_Search.Name = "grid_Search";
-            this.grid_Search.Size = new System.Drawing.Size(732, 475);
+            this.grid_Search.Size = new System.Drawing.Size(732, 437);
             this.grid_Search.TabIndex = 2;
             this.grid_Search.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgv_Search});
             // 
-            // gridView1
+            // dgv_Search
             // 
-            this.gridView1.GridControl = this.grid_Search;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.dgv_Search.GridControl = this.grid_Search;
+            this.dgv_Search.Name = "dgv_Search";
+            this.dgv_Search.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Search.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Search.OptionsBehavior.Editable = false;
+            this.dgv_Search.OptionsBehavior.ReadOnly = true;
+            this.dgv_Search.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.dgv_Search.OptionsView.ColumnAutoWidth = false;
+            this.dgv_Search.OptionsView.ShowGroupPanel = false;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btn_OpenFile);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(0, 577);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(732, 28);
+            this.panelControl1.TabIndex = 3;
             // 
             // frm_SearchAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 608);
-            this.Controls.Add(this.simpleButton1);
+            this.ClientSize = new System.Drawing.Size(732, 605);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.grid_Search);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::Official_Journal.Properties.Resources.Journal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_SearchAll";
@@ -337,7 +356,9 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spin_Year.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -362,8 +383,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private System.Windows.Forms.ComboBox cmb_;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btn_OpenFile;
         private DevExpress.XtraGrid.GridControl grid_Search;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_Search;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

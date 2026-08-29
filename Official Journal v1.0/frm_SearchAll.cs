@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
+using System.IO;
+using DevExpress.XtraSplashScreen;
 
 namespace Official_Journal
 {
@@ -20,6 +22,7 @@ namespace Official_Journal
         }
         //--------------------- cls -------------------------
         DataAccesLayer DAC = new DataAccesLayer();
+        cls_Issues ISS = new cls_Issues();
 
         //------------------------- Load ----------------
         private void frm_SearchAll_Load(object sender, EventArgs e)
@@ -35,14 +38,16 @@ namespace Official_Journal
             cmb_Dep.ValueMember = "Dep_ID";
             cmb_Dep.SelectedIndex = -1;
             //
+            dtp_PubDate.Text = "";
+            dtp_SaveDate.Text = "";
         }
         //------------------------- fun --------------------
 
-        private void Search()  // محتاج فيو خاص 
+        private void SearchAll()  // محتاج فيو خاص 
         {
             StringBuilder sql = new StringBuilder();
 
-            sql.Append("SELECT * FROM VW_Dep_Pub_Law WHERE [Issue_DebPubStatus]=1 ");
+            sql.Append("SELECT * FROM VW_SearchAll WHERE 1=1 ");
 
             if (!string.IsNullOrWhiteSpace(txt_IssueNo.Text))
                 sql.Append(" AND [رقم العدد] LIKE N'%" + txt_IssueNo.Text + "%'");
@@ -61,14 +66,16 @@ namespace Official_Journal
                 sql.Append(" AND CAST([تاريخ الحفظ] AS DATE)=CAST('" +
                            dtp_SaveDate.Value.ToString("yyyy-MM-dd") + "' AS DATE)");
 
-            if (cmb_.Text != null)
-                sql.Append(" AND [الجهة المصدرة]=N'" + cmb_.Text + "'");
+            if (!string.IsNullOrWhiteSpace(cmb_Auth.Text))
+                sql.Append(" AND [الجهة المصدرة]=N'" + cmb_Auth.Text + "'");
 
-            if (cmb_Dep.Text != null)
+            if (!string.IsNullOrWhiteSpace(cmb_Dep.Text))
                 sql.Append(" AND [الجهة المعنية]=N'" + cmb_Dep.Text + "'");
 
-            if (cmb_Auth.Text != null)
-                sql.Append(" AND [مطابقة القرار]=N'" + cmb_Auth.Text + "'");
+            if (!string.IsNullOrWhiteSpace(cmb_.Text))
+                sql.Append(" AND [مطابقة القرار]=N'" + cmb_.Text + "'");
+
+          //  MessageBox.Show(sql.ToString());
 
             grid_Search.DataSource = DAC.SelectQue(sql.ToString());
         }
@@ -76,9 +83,26 @@ namespace Official_Journal
         //------------------------- btn ---------------------
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            Search();
+            SearchAll();
         }
 
-
+        private void btn_OpenFile_Click(object sender, EventArgs e)
+        {
+            if (dgv_Search.GetSelectedRows().Length > 0)
+            {
+                SplashScreenManager.ShowForm(this, typeof(frm_Wait));
+                //
+                DataTable dt = ISS.GetIssueFile(dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString(), dgv_Search.GetFocusedRowCellValue("سنة العدد").ToString());
+                byte[] PdfFile = (byte[])dt.Rows[0]["الملف"];
+                frm_PdfViewer frm = new frm_PdfViewer();
+                frm.pdfVie.LoadDocument(new MemoryStream(PdfFile));
+                frm.TopMost = true;
+                frm.Show();
+                frm.BringToFront();
+                frm.Text = dgv_Search.GetFocusedRowCellValue("كود العدد").ToString() ;
+                //
+                SplashScreenManager.CloseForm();
+            }
+        }
     }
 }

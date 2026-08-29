@@ -190,6 +190,7 @@ namespace Official_Journal
             DAC.ExcCmd("SP_UpdLaw", Par);
             DAC.CnClose();
         }
+  
         public void AddLawDep(string Dep_ID,string Law_No, string Issue_No, string Issue_Year, 
              string Model_Type, string Action_Type, string User_ID, string Tran_Describe, string Link_ID)
         {

@@ -24,7 +24,7 @@ namespace Official_Journal
         //------------------func------------------------
         public void GetData()
         {
-            grid_Dep.DataSource = DAC.SelectQue("select [Dep_ID]'كود' ,[Dep_Name]'الجهة المعنية' ,Notes'ملاحظات' from [dbo].[tbl_Department]");
+            grid_Dep.DataSource = DAC.SelectQue("select [Dep_ID]'كود' ,[Dep_Name]'الجهة المعنية' ,App_Pass'كلمة المرور' from [dbo].[tbl_Department]");
             dgv_Dep.Columns[0].Width = 15;
         }
 
@@ -34,13 +34,13 @@ namespace Official_Journal
         {
             txt_ID.Clear();
             txt_Dep.Clear();
-            txt_Note.Clear();
+            txt_App_Pass.Clear();
         }
 
         public void Reset()
         {
             txt_Dep.Enabled = false;
-            txt_Note.Enabled = false;
+            txt_App_Pass.Enabled = false;
             grid_Dep.Enabled = true;
             btn_New.Enabled = true;
             btn_Edite.Enabled = false;
@@ -59,7 +59,7 @@ namespace Official_Journal
         {
             Clear();
             txt_Dep.Enabled = true;
-            txt_Note.Enabled = true;
+            txt_App_Pass.Enabled = true;
             grid_Dep.Enabled = false;
             btn_New.Enabled = false;
             btn_Edite.Enabled = false;
@@ -79,7 +79,7 @@ namespace Official_Journal
                 }
                 else
                 {
-                    DAC.ExcQue("insert into tbl_Department ([Dep_Name],[Notes])Values(N'" + txt_Dep.Text + "',N'" + txt_Note.Text + "')");
+                    DAC.ExcQue("insert into tbl_Department ([Dep_Name],[App_Pass])Values(N'" + txt_Dep.Text + "',N'" + txt_App_Pass.Text + "')");
                     Clear();
                     Reset();
                     GetData();
@@ -98,7 +98,7 @@ namespace Official_Journal
                     R = Msg.AskUpdateMessage();
                     if (R == DialogResult.Yes)
                     {
-                        DAC.ExcQue("update tbl_Department set [Dep_Name]=N'" + txt_Dep.Text + "', Notes=N'" + txt_Note.Text + "' where [Dep_ID]=N'"+txt_ID.Text+"'");
+                        DAC.ExcQue("update tbl_Department set [Dep_Name]=N'" + txt_Dep.Text + "', App_Pass=N'" + txt_App_Pass.Text + "' where [Dep_ID]=N'"+txt_ID.Text+"'");
                         Clear();
                         Reset();
                         GetData();
@@ -111,7 +111,7 @@ namespace Official_Journal
         private void btn_Edite_Click(object sender, EventArgs e)
         {           
             txt_Dep.Enabled = true;
-            txt_Note.Enabled = true;
+            txt_App_Pass.Enabled = true;
             grid_Dep.Enabled = false;
             btn_New.Enabled = false;
             btn_Edite.Enabled = false;
@@ -149,7 +149,7 @@ namespace Official_Journal
             {
                 txt_ID.Text = dgv_Dep.GetFocusedRowCellValue("كود").ToString();
                 txt_Dep.Text = dgv_Dep.GetFocusedRowCellValue("الجهة المعنية").ToString();
-                txt_Note.Text = dgv_Dep.GetFocusedRowCellValue("ملاحظات").ToString();
+                txt_App_Pass.Text = dgv_Dep.GetFocusedRowCellValue("ملاحظات").ToString();
                 btn_Edite.Enabled = true;
                 btn_Delete.Enabled = true;
             }
