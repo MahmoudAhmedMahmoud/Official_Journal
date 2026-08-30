@@ -17,5 +17,10 @@ namespace Official_Journal
         {
             InitializeComponent();
         }
+
+        private void frm_PdfViewer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -127,8 +127,9 @@
             this.gb_Issue.Controls.Add(this.txt_IssueNo);
             this.gb_Issue.Dock = System.Windows.Forms.DockStyle.Top;
             this.gb_Issue.Location = new System.Drawing.Point(0, 0);
+            this.gb_Issue.Margin = new System.Windows.Forms.Padding(4);
             this.gb_Issue.Name = "gb_Issue";
-            this.gb_Issue.Size = new System.Drawing.Size(898, 121);
+            this.gb_Issue.Size = new System.Drawing.Size(1048, 158);
             this.gb_Issue.TabIndex = 0;
             this.gb_Issue.Text = "العدد";
             // 
@@ -139,9 +140,10 @@
             this.btn_CancelIssue.Appearance.Options.UseFont = true;
             this.btn_CancelIssue.Enabled = false;
             this.btn_CancelIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelIssue.ImageOptions.Image")));
-            this.btn_CancelIssue.Location = new System.Drawing.Point(78, 80);
+            this.btn_CancelIssue.Location = new System.Drawing.Point(91, 105);
+            this.btn_CancelIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CancelIssue.Name = "btn_CancelIssue";
-            this.btn_CancelIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_CancelIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_CancelIssue.TabIndex = 4;
             this.btn_CancelIssue.TabStop = false;
             this.btn_CancelIssue.Text = "الغاء";
@@ -153,9 +155,10 @@
             this.btn_DeleteIssue.Appearance.Options.UseFont = true;
             this.btn_DeleteIssue.Enabled = false;
             this.btn_DeleteIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteIssue.ImageOptions.Image")));
-            this.btn_DeleteIssue.Location = new System.Drawing.Point(144, 80);
+            this.btn_DeleteIssue.Location = new System.Drawing.Point(168, 105);
+            this.btn_DeleteIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DeleteIssue.Name = "btn_DeleteIssue";
-            this.btn_DeleteIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_DeleteIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_DeleteIssue.TabIndex = 5;
             this.btn_DeleteIssue.TabStop = false;
             this.btn_DeleteIssue.Text = "حذف";
@@ -168,9 +171,10 @@
             this.btn_NewIssue.Appearance.Options.UseFont = true;
             this.btn_NewIssue.Enabled = false;
             this.btn_NewIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NewIssue.ImageOptions.Image")));
-            this.btn_NewIssue.Location = new System.Drawing.Point(342, 80);
+            this.btn_NewIssue.Location = new System.Drawing.Point(399, 105);
+            this.btn_NewIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_NewIssue.Name = "btn_NewIssue";
-            this.btn_NewIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_NewIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_NewIssue.TabIndex = 6;
             this.btn_NewIssue.Text = "جديد";
             this.btn_NewIssue.Click += new System.EventHandler(this.btn_NewIssue_Click);
@@ -184,7 +188,8 @@
             0,
             0});
             this.Spin_Year.EnterMoveNextControl = true;
-            this.Spin_Year.Location = new System.Drawing.Point(601, 36);
+            this.Spin_Year.Location = new System.Drawing.Point(701, 47);
+            this.Spin_Year.Margin = new System.Windows.Forms.Padding(4);
             this.Spin_Year.Name = "Spin_Year";
             this.Spin_Year.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.Spin_Year.Properties.Appearance.Options.UseFont = true;
@@ -207,7 +212,7 @@
             this.Spin_Year.Properties.NullValuePrompt = "2000";
             this.Spin_Year.Properties.SpinStyle = DevExpress.XtraEditors.Controls.SpinStyles.Horizontal;
             this.Spin_Year.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Spin_Year.Size = new System.Drawing.Size(76, 20);
+            this.Spin_Year.Size = new System.Drawing.Size(89, 23);
             this.Spin_Year.TabIndex = 1;
             this.Spin_Year.EditValueChanged += new System.EventHandler(this.Spin_Year_EditValueChanged);
             // 
@@ -217,9 +222,10 @@
             this.btn_SaveIssue.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SaveIssue.Appearance.Options.UseFont = true;
             this.btn_SaveIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaveIssue.ImageOptions.Image")));
-            this.btn_SaveIssue.Location = new System.Drawing.Point(276, 80);
+            this.btn_SaveIssue.Location = new System.Drawing.Point(322, 105);
+            this.btn_SaveIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SaveIssue.Name = "btn_SaveIssue";
-            this.btn_SaveIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_SaveIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_SaveIssue.TabIndex = 5;
             this.btn_SaveIssue.Text = "حفظ";
             this.btn_SaveIssue.Click += new System.EventHandler(this.btn_SaveIssue_Click);
@@ -230,9 +236,10 @@
             this.btn_SearchIssue.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SearchIssue.Appearance.Options.UseFont = true;
             this.btn_SearchIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchIssue.ImageOptions.Image")));
-            this.btn_SearchIssue.Location = new System.Drawing.Point(12, 80);
+            this.btn_SearchIssue.Location = new System.Drawing.Point(14, 105);
+            this.btn_SearchIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SearchIssue.Name = "btn_SearchIssue";
-            this.btn_SearchIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_SearchIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_SearchIssue.TabIndex = 3;
             this.btn_SearchIssue.TabStop = false;
             this.btn_SearchIssue.Text = "بحث";
@@ -245,9 +252,10 @@
             this.btn_EditeIssue.Appearance.Options.UseFont = true;
             this.btn_EditeIssue.Enabled = false;
             this.btn_EditeIssue.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditeIssue.ImageOptions.Image")));
-            this.btn_EditeIssue.Location = new System.Drawing.Point(210, 80);
+            this.btn_EditeIssue.Location = new System.Drawing.Point(245, 105);
+            this.btn_EditeIssue.Margin = new System.Windows.Forms.Padding(4);
             this.btn_EditeIssue.Name = "btn_EditeIssue";
-            this.btn_EditeIssue.Size = new System.Drawing.Size(60, 23);
+            this.btn_EditeIssue.Size = new System.Drawing.Size(70, 30);
             this.btn_EditeIssue.TabIndex = 3;
             this.btn_EditeIssue.TabStop = false;
             this.btn_EditeIssue.Text = "تعديل";
@@ -257,10 +265,11 @@
             // 
             this.btn_AddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_AddFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddFile.ImageOptions.Image")));
-            this.btn_AddFile.Location = new System.Drawing.Point(435, 71);
+            this.btn_AddFile.Location = new System.Drawing.Point(507, 93);
+            this.btn_AddFile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AddFile.Name = "btn_AddFile";
             this.btn_AddFile.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_AddFile.Size = new System.Drawing.Size(40, 41);
+            this.btn_AddFile.Size = new System.Drawing.Size(47, 54);
             this.btn_AddFile.TabIndex = 4;
             this.btn_AddFile.Click += new System.EventHandler(this.btn_AddFile_Click);
             // 
@@ -269,9 +278,10 @@
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(683, 40);
+            this.labelControl2.Location = new System.Drawing.Point(797, 52);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(33, 19);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "السنة";
             // 
@@ -280,9 +290,10 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(835, 85);
+            this.labelControl3.Location = new System.Drawing.Point(974, 111);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(49, 13);
+            this.labelControl3.Size = new System.Drawing.Size(62, 19);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "ملف العدد";
             // 
@@ -292,10 +303,11 @@
             this.dtp_PublishDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtp_PublishDate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.dtp_PublishDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_PublishDate.Location = new System.Drawing.Point(238, 36);
+            this.dtp_PublishDate.Location = new System.Drawing.Point(278, 47);
+            this.dtp_PublishDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_PublishDate.Name = "dtp_PublishDate";
             this.dtp_PublishDate.RightToLeftLayout = true;
-            this.dtp_PublishDate.Size = new System.Drawing.Size(100, 20);
+            this.dtp_PublishDate.Size = new System.Drawing.Size(116, 24);
             this.dtp_PublishDate.TabIndex = 2;
             // 
             // labelControl1
@@ -303,9 +315,10 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(834, 40);
+            this.labelControl1.Location = new System.Drawing.Point(973, 52);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.Size = new System.Drawing.Size(55, 19);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "رقم العدد";
             // 
@@ -315,19 +328,21 @@
             this.dtp_SaveDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtp_SaveDate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.dtp_SaveDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_SaveDate.Location = new System.Drawing.Point(44, 36);
+            this.dtp_SaveDate.Location = new System.Drawing.Point(51, 47);
+            this.dtp_SaveDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_SaveDate.Name = "dtp_SaveDate";
             this.dtp_SaveDate.RightToLeftLayout = true;
-            this.dtp_SaveDate.Size = new System.Drawing.Size(100, 20);
+            this.dtp_SaveDate.Size = new System.Drawing.Size(116, 24);
             this.dtp_SaveDate.TabIndex = 3;
             // 
             // txt_Path
             // 
             this.txt_Path.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Path.Enabled = false;
-            this.txt_Path.Location = new System.Drawing.Point(481, 82);
+            this.txt_Path.Location = new System.Drawing.Point(561, 107);
+            this.txt_Path.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Path.Name = "txt_Path";
-            this.txt_Path.Size = new System.Drawing.Size(347, 22);
+            this.txt_Path.Size = new System.Drawing.Size(404, 25);
             this.txt_Path.TabIndex = 0;
             // 
             // labelControl6
@@ -335,9 +350,10 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(349, 40);
+            this.labelControl6.Location = new System.Drawing.Point(407, 52);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(50, 13);
+            this.labelControl6.Size = new System.Drawing.Size(64, 19);
             this.labelControl6.TabIndex = 1;
             this.labelControl6.Text = "تاريخ النشر";
             // 
@@ -346,9 +362,10 @@
             this.txt_IssueID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_IssueID.Enabled = false;
             this.txt_IssueID.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_IssueID.Location = new System.Drawing.Point(430, 36);
+            this.txt_IssueID.Location = new System.Drawing.Point(502, 47);
+            this.txt_IssueID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IssueID.Name = "txt_IssueID";
-            this.txt_IssueID.Size = new System.Drawing.Size(156, 22);
+            this.txt_IssueID.Size = new System.Drawing.Size(181, 25);
             this.txt_IssueID.TabIndex = 0;
             this.txt_IssueID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -357,9 +374,10 @@
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(155, 40);
+            this.labelControl5.Location = new System.Drawing.Point(181, 52);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(54, 13);
+            this.labelControl5.Size = new System.Drawing.Size(69, 19);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "تاريخ الحفظ";
             // 
@@ -367,9 +385,10 @@
             // 
             this.txt_Year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Year.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_Year.Location = new System.Drawing.Point(601, 59);
+            this.txt_Year.Location = new System.Drawing.Point(701, 77);
+            this.txt_Year.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Year.Name = "txt_Year";
-            this.txt_Year.Size = new System.Drawing.Size(100, 20);
+            this.txt_Year.Size = new System.Drawing.Size(116, 24);
             this.txt_Year.TabIndex = 0;
             this.txt_Year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Year.Visible = false;
@@ -378,9 +397,10 @@
             // 
             this.txt_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_ID.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_ID.Location = new System.Drawing.Point(728, 59);
+            this.txt_ID.Location = new System.Drawing.Point(849, 77);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(100, 20);
+            this.txt_ID.Size = new System.Drawing.Size(116, 24);
             this.txt_ID.TabIndex = 0;
             this.txt_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ID.Visible = false;
@@ -389,9 +409,10 @@
             // 
             this.txt_IssueNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_IssueNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_IssueNo.Location = new System.Drawing.Point(728, 36);
+            this.txt_IssueNo.Location = new System.Drawing.Point(849, 47);
+            this.txt_IssueNo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IssueNo.Name = "txt_IssueNo";
-            this.txt_IssueNo.Size = new System.Drawing.Size(100, 20);
+            this.txt_IssueNo.Size = new System.Drawing.Size(116, 24);
             this.txt_IssueNo.TabIndex = 0;
             this.txt_IssueNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_IssueNo.TextChanged += new System.EventHandler(this.txt_IssueNo_TextChanged);
@@ -403,9 +424,10 @@
             this.gb_Laws.Controls.Add(this.grid_Law);
             this.gb_Laws.Dock = System.Windows.Forms.DockStyle.Top;
             this.gb_Laws.Enabled = false;
-            this.gb_Laws.Location = new System.Drawing.Point(0, 121);
+            this.gb_Laws.Location = new System.Drawing.Point(0, 158);
+            this.gb_Laws.Margin = new System.Windows.Forms.Padding(4);
             this.gb_Laws.Name = "gb_Laws";
-            this.gb_Laws.Size = new System.Drawing.Size(898, 174);
+            this.gb_Laws.Size = new System.Drawing.Size(1048, 228);
             this.gb_Laws.TabIndex = 1;
             this.gb_Laws.Text = "القوانين";
             // 
@@ -417,10 +439,11 @@
             this.btn_Refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.ImageOptions.Image")));
             this.btn_Refresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btn_Refresh.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btn_Refresh.Location = new System.Drawing.Point(6, 3);
+            this.btn_Refresh.Location = new System.Drawing.Point(7, 4);
+            this.btn_Refresh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_Refresh.Size = new System.Drawing.Size(24, 19);
+            this.btn_Refresh.Size = new System.Drawing.Size(28, 25);
             this.btn_Refresh.TabIndex = 4;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
@@ -430,9 +453,10 @@
             this.btn_AddLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_AddLaw.Appearance.Options.UseFont = true;
             this.btn_AddLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddLaw.ImageOptions.Image")));
-            this.btn_AddLaw.Location = new System.Drawing.Point(11, 147);
+            this.btn_AddLaw.Location = new System.Drawing.Point(13, 192);
+            this.btn_AddLaw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AddLaw.Name = "btn_AddLaw";
-            this.btn_AddLaw.Size = new System.Drawing.Size(89, 22);
+            this.btn_AddLaw.Size = new System.Drawing.Size(104, 29);
             this.btn_AddLaw.TabIndex = 5;
             this.btn_AddLaw.Text = "اضافة قانون";
             this.btn_AddLaw.Click += new System.EventHandler(this.btn_AddLaw_Click);
@@ -440,16 +464,19 @@
             // grid_Law
             // 
             this.grid_Law.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_Law.Location = new System.Drawing.Point(2, 22);
+            this.grid_Law.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grid_Law.Location = new System.Drawing.Point(2, 27);
             this.grid_Law.MainView = this.dgv_Law;
+            this.grid_Law.Margin = new System.Windows.Forms.Padding(4);
             this.grid_Law.Name = "grid_Law";
-            this.grid_Law.Size = new System.Drawing.Size(894, 150);
+            this.grid_Law.Size = new System.Drawing.Size(1044, 199);
             this.grid_Law.TabIndex = 0;
             this.grid_Law.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgv_Law});
             // 
             // dgv_Law
             // 
+            this.dgv_Law.DetailHeight = 458;
             this.dgv_Law.GridControl = this.grid_Law;
             this.dgv_Law.Name = "dgv_Law";
             this.dgv_Law.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -477,9 +504,10 @@
             this.gb_LawDetails.Controls.Add(this.txt_LawNo);
             this.gb_LawDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.gb_LawDetails.Enabled = false;
-            this.gb_LawDetails.Location = new System.Drawing.Point(0, 295);
+            this.gb_LawDetails.Location = new System.Drawing.Point(0, 386);
+            this.gb_LawDetails.Margin = new System.Windows.Forms.Padding(4);
             this.gb_LawDetails.Name = "gb_LawDetails";
-            this.gb_LawDetails.Size = new System.Drawing.Size(898, 281);
+            this.gb_LawDetails.Size = new System.Drawing.Size(1048, 367);
             this.gb_LawDetails.TabIndex = 2;
             this.gb_LawDetails.Text = "بيانات القانون";
             // 
@@ -489,11 +517,13 @@
             this.btn_SearchAuth.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SearchAuth.Appearance.Options.UseFont = true;
             this.btn_SearchAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchAuth.ImageOptions.Image")));
-            this.btn_SearchAuth.Location = new System.Drawing.Point(12, 31);
+            this.btn_SearchAuth.Location = new System.Drawing.Point(14, 41);
+            this.btn_SearchAuth.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SearchAuth.Name = "btn_SearchAuth";
             this.btn_SearchAuth.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_SearchAuth.Size = new System.Drawing.Size(23, 23);
+            this.btn_SearchAuth.Size = new System.Drawing.Size(27, 30);
             this.btn_SearchAuth.TabIndex = 7;
+            this.btn_SearchAuth.Click += new System.EventHandler(this.btn_SearchAuth_Click);
             // 
             // gb_Desc
             // 
@@ -502,9 +532,10 @@
             this.gb_Desc.Controls.Add(this.rb_N);
             this.gb_Desc.Controls.Add(this.rb_Y);
             this.gb_Desc.Controls.Add(this.txt_Desc);
-            this.gb_Desc.Location = new System.Drawing.Point(457, 65);
+            this.gb_Desc.Location = new System.Drawing.Point(533, 85);
+            this.gb_Desc.Margin = new System.Windows.Forms.Padding(4);
             this.gb_Desc.Name = "gb_Desc";
-            this.gb_Desc.Size = new System.Drawing.Size(419, 208);
+            this.gb_Desc.Size = new System.Drawing.Size(489, 272);
             this.gb_Desc.TabIndex = 6;
             this.gb_Desc.Text = "مطابقة القرار";
             // 
@@ -516,9 +547,10 @@
             this.labelControl9.Appearance.Options.UseBackColor = true;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.Location = new System.Drawing.Point(2, 45);
+            this.labelControl9.Location = new System.Drawing.Point(2, 59);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(414, 20);
+            this.labelControl9.Size = new System.Drawing.Size(483, 26);
             this.labelControl9.TabIndex = 1;
             this.labelControl9.Text = "   مضمون القرار";
             // 
@@ -528,9 +560,10 @@
             this.rb_N.AutoSize = true;
             this.rb_N.Checked = true;
             this.rb_N.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.rb_N.Location = new System.Drawing.Point(281, 25);
+            this.rb_N.Location = new System.Drawing.Point(323, 33);
+            this.rb_N.Margin = new System.Windows.Forms.Padding(4);
             this.rb_N.Name = "rb_N";
-            this.rb_N.Size = new System.Drawing.Size(69, 17);
+            this.rb_N.Size = new System.Drawing.Size(85, 21);
             this.rb_N.TabIndex = 5;
             this.rb_N.TabStop = true;
             this.rb_N.Text = "لا ينطبق";
@@ -542,9 +575,10 @@
             this.rb_Y.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_Y.AutoSize = true;
             this.rb_Y.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.rb_Y.Location = new System.Drawing.Point(356, 25);
+            this.rb_Y.Location = new System.Drawing.Point(412, 33);
+            this.rb_Y.Margin = new System.Windows.Forms.Padding(4);
             this.rb_Y.Name = "rb_Y";
-            this.rb_Y.Size = new System.Drawing.Size(58, 17);
+            this.rb_Y.Size = new System.Drawing.Size(71, 21);
             this.rb_Y.TabIndex = 6;
             this.rb_Y.Text = "ينطبق";
             this.rb_Y.UseVisualStyleBackColor = true;
@@ -554,10 +588,11 @@
             // 
             this.txt_Desc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txt_Desc.Enabled = false;
-            this.txt_Desc.Location = new System.Drawing.Point(2, 67);
+            this.txt_Desc.Location = new System.Drawing.Point(2, 89);
+            this.txt_Desc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Desc.Multiline = true;
             this.txt_Desc.Name = "txt_Desc";
-            this.txt_Desc.Size = new System.Drawing.Size(415, 139);
+            this.txt_Desc.Size = new System.Drawing.Size(485, 181);
             this.txt_Desc.TabIndex = 0;
             this.txt_Desc.Text = "لا ينطبق";
             // 
@@ -569,9 +604,10 @@
             this.gb_Dep.Controls.Add(this.btn_SearchDep);
             this.gb_Dep.Controls.Add(this.btn_AddLawDep);
             this.gb_Dep.Controls.Add(this.cmb_Dep);
-            this.gb_Dep.Location = new System.Drawing.Point(12, 65);
+            this.gb_Dep.Location = new System.Drawing.Point(14, 85);
+            this.gb_Dep.Margin = new System.Windows.Forms.Padding(4);
             this.gb_Dep.Name = "gb_Dep";
-            this.gb_Dep.Size = new System.Drawing.Size(434, 208);
+            this.gb_Dep.Size = new System.Drawing.Size(506, 272);
             this.gb_Dep.TabIndex = 5;
             this.gb_Dep.Text = "الجهات المعنية ";
             // 
@@ -586,17 +622,20 @@
             this.dgv_LawDep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dep_ID,
             this.Dep_Name});
-            this.dgv_LawDep.Location = new System.Drawing.Point(13, 55);
+            this.dgv_LawDep.Location = new System.Drawing.Point(15, 72);
+            this.dgv_LawDep.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_LawDep.MultiSelect = false;
             this.dgv_LawDep.Name = "dgv_LawDep";
             this.dgv_LawDep.ReadOnly = true;
+            this.dgv_LawDep.RowHeadersWidth = 51;
             this.dgv_LawDep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_LawDep.Size = new System.Drawing.Size(415, 132);
+            this.dgv_LawDep.Size = new System.Drawing.Size(484, 173);
             this.dgv_LawDep.TabIndex = 0;
             // 
             // Dep_ID
             // 
             this.Dep_ID.HeaderText = "كود";
+            this.Dep_ID.MinimumWidth = 6;
             this.Dep_ID.Name = "Dep_ID";
             this.Dep_ID.ReadOnly = true;
             this.Dep_ID.Visible = false;
@@ -604,6 +643,7 @@
             // Dep_Name
             // 
             this.Dep_Name.HeaderText = "الجهة المعنية";
+            this.Dep_Name.MinimumWidth = 6;
             this.Dep_Name.Name = "Dep_Name";
             this.Dep_Name.ReadOnly = true;
             // 
@@ -613,10 +653,11 @@
             this.btn_DelLawDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_DelLawDep.Appearance.Options.UseFont = true;
             this.btn_DelLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DelLawDep.ImageOptions.Image")));
-            this.btn_DelLawDep.Location = new System.Drawing.Point(13, 185);
+            this.btn_DelLawDep.Location = new System.Drawing.Point(15, 242);
+            this.btn_DelLawDep.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DelLawDep.Name = "btn_DelLawDep";
             this.btn_DelLawDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_DelLawDep.Size = new System.Drawing.Size(23, 23);
+            this.btn_DelLawDep.Size = new System.Drawing.Size(27, 30);
             this.btn_DelLawDep.TabIndex = 3;
             this.btn_DelLawDep.Click += new System.EventHandler(this.btn_DelLawDep_Click);
             // 
@@ -626,11 +667,13 @@
             this.btn_SearchDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SearchDep.Appearance.Options.UseFont = true;
             this.btn_SearchDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SearchDep.ImageOptions.Image")));
-            this.btn_SearchDep.Location = new System.Drawing.Point(13, 24);
+            this.btn_SearchDep.Location = new System.Drawing.Point(15, 31);
+            this.btn_SearchDep.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SearchDep.Name = "btn_SearchDep";
             this.btn_SearchDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_SearchDep.Size = new System.Drawing.Size(23, 23);
+            this.btn_SearchDep.Size = new System.Drawing.Size(27, 30);
             this.btn_SearchDep.TabIndex = 3;
+            this.btn_SearchDep.Click += new System.EventHandler(this.btn_SearchDep_Click);
             // 
             // btn_AddLawDep
             // 
@@ -638,10 +681,11 @@
             this.btn_AddLawDep.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_AddLawDep.Appearance.Options.UseFont = true;
             this.btn_AddLawDep.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddLawDep.ImageOptions.Image")));
-            this.btn_AddLawDep.Location = new System.Drawing.Point(36, 24);
+            this.btn_AddLawDep.Location = new System.Drawing.Point(42, 31);
+            this.btn_AddLawDep.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AddLawDep.Name = "btn_AddLawDep";
             this.btn_AddLawDep.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_AddLawDep.Size = new System.Drawing.Size(23, 23);
+            this.btn_AddLawDep.Size = new System.Drawing.Size(27, 30);
             this.btn_AddLawDep.TabIndex = 3;
             this.btn_AddLawDep.Click += new System.EventHandler(this.btn_AddLawDep_Click);
             // 
@@ -651,9 +695,10 @@
             this.cmb_Dep.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmb_Dep.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.cmb_Dep.FormattingEnabled = true;
-            this.cmb_Dep.Location = new System.Drawing.Point(65, 26);
+            this.cmb_Dep.Location = new System.Drawing.Point(76, 34);
+            this.cmb_Dep.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Dep.Name = "cmb_Dep";
-            this.cmb_Dep.Size = new System.Drawing.Size(363, 21);
+            this.cmb_Dep.Size = new System.Drawing.Size(423, 25);
             this.cmb_Dep.TabIndex = 3;
             // 
             // btn_AddAuth
@@ -662,11 +707,13 @@
             this.btn_AddAuth.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_AddAuth.Appearance.Options.UseFont = true;
             this.btn_AddAuth.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddAuth.ImageOptions.Image")));
-            this.btn_AddAuth.Location = new System.Drawing.Point(40, 30);
+            this.btn_AddAuth.Location = new System.Drawing.Point(47, 39);
+            this.btn_AddAuth.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AddAuth.Name = "btn_AddAuth";
             this.btn_AddAuth.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btn_AddAuth.Size = new System.Drawing.Size(23, 23);
+            this.btn_AddAuth.Size = new System.Drawing.Size(27, 30);
             this.btn_AddAuth.TabIndex = 3;
+            this.btn_AddAuth.Click += new System.EventHandler(this.btn_AddAuth_Click);
             // 
             // cmb_Auth
             // 
@@ -674,9 +721,10 @@
             this.cmb_Auth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmb_Auth.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.cmb_Auth.FormattingEnabled = true;
-            this.cmb_Auth.Location = new System.Drawing.Point(69, 30);
+            this.cmb_Auth.Location = new System.Drawing.Point(80, 39);
+            this.cmb_Auth.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Auth.Name = "cmb_Auth";
-            this.cmb_Auth.Size = new System.Drawing.Size(315, 21);
+            this.cmb_Auth.Size = new System.Drawing.Size(367, 24);
             this.cmb_Auth.TabIndex = 3;
             // 
             // dtp_LawIssueDate
@@ -685,10 +733,11 @@
             this.dtp_LawIssueDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtp_LawIssueDate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.dtp_LawIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_LawIssueDate.Location = new System.Drawing.Point(457, 30);
+            this.dtp_LawIssueDate.Location = new System.Drawing.Point(533, 39);
+            this.dtp_LawIssueDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_LawIssueDate.Name = "dtp_LawIssueDate";
             this.dtp_LawIssueDate.RightToLeftLayout = true;
-            this.dtp_LawIssueDate.Size = new System.Drawing.Size(100, 20);
+            this.dtp_LawIssueDate.Size = new System.Drawing.Size(116, 24);
             this.dtp_LawIssueDate.TabIndex = 2;
             // 
             // labelControl7
@@ -696,9 +745,10 @@
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(563, 34);
+            this.labelControl7.Location = new System.Drawing.Point(657, 44);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(61, 13);
+            this.labelControl7.Size = new System.Drawing.Size(77, 19);
             this.labelControl7.TabIndex = 1;
             this.labelControl7.Text = "تاريخ الاصدار";
             // 
@@ -707,9 +757,10 @@
             this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl8.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(390, 34);
+            this.labelControl8.Location = new System.Drawing.Point(455, 44);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(56, 13);
+            this.labelControl8.Size = new System.Drawing.Size(70, 19);
             this.labelControl8.TabIndex = 1;
             this.labelControl8.Text = "جهة الاصدار";
             // 
@@ -718,9 +769,10 @@
             this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl11.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(687, 34);
+            this.labelControl11.Location = new System.Drawing.Point(802, 44);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(23, 13);
+            this.labelControl11.Size = new System.Drawing.Size(29, 19);
             this.labelControl11.TabIndex = 1;
             this.labelControl11.Text = "لسنة";
             // 
@@ -730,9 +782,10 @@
             this.txt_LawYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_LawYear.Enabled = false;
             this.txt_LawYear.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.txt_LawYear.Location = new System.Drawing.Point(638, 32);
+            this.txt_LawYear.Location = new System.Drawing.Point(744, 42);
+            this.txt_LawYear.Margin = new System.Windows.Forms.Padding(4);
             this.txt_LawYear.Name = "txt_LawYear";
-            this.txt_LawYear.Size = new System.Drawing.Size(43, 17);
+            this.txt_LawYear.Size = new System.Drawing.Size(50, 21);
             this.txt_LawYear.TabIndex = 0;
             this.txt_LawYear.Text = ".";
             this.txt_LawYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -742,9 +795,10 @@
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(827, 34);
+            this.labelControl4.Location = new System.Drawing.Point(965, 44);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(52, 13);
+            this.labelControl4.Size = new System.Drawing.Size(65, 19);
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "رقم القانون";
             // 
@@ -752,9 +806,10 @@
             // 
             this.txt_IDLaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_IDLaw.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_IDLaw.Location = new System.Drawing.Point(721, 56);
+            this.txt_IDLaw.Location = new System.Drawing.Point(841, 73);
+            this.txt_IDLaw.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IDLaw.Name = "txt_IDLaw";
-            this.txt_IDLaw.Size = new System.Drawing.Size(100, 20);
+            this.txt_IDLaw.Size = new System.Drawing.Size(116, 24);
             this.txt_IDLaw.TabIndex = 0;
             this.txt_IDLaw.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_IDLaw.Visible = false;
@@ -763,9 +818,10 @@
             // 
             this.txt_LawNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_LawNo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_LawNo.Location = new System.Drawing.Point(721, 30);
+            this.txt_LawNo.Location = new System.Drawing.Point(841, 39);
+            this.txt_LawNo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_LawNo.Name = "txt_LawNo";
-            this.txt_LawNo.Size = new System.Drawing.Size(100, 20);
+            this.txt_LawNo.Size = new System.Drawing.Size(116, 24);
             this.txt_LawNo.TabIndex = 0;
             this.txt_LawNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -779,9 +835,10 @@
             this.pnl_Lawbtn.Controls.Add(this.btn_SaveLaw);
             this.pnl_Lawbtn.Controls.Add(this.btn_EditeLaw);
             this.pnl_Lawbtn.Enabled = false;
-            this.pnl_Lawbtn.Location = new System.Drawing.Point(0, 574);
+            this.pnl_Lawbtn.Location = new System.Drawing.Point(0, 751);
+            this.pnl_Lawbtn.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Lawbtn.Name = "pnl_Lawbtn";
-            this.pnl_Lawbtn.Size = new System.Drawing.Size(898, 38);
+            this.pnl_Lawbtn.Size = new System.Drawing.Size(1048, 50);
             this.pnl_Lawbtn.TabIndex = 7;
             // 
             // btn_CancelLaw
@@ -790,9 +847,10 @@
             this.btn_CancelLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_CancelLaw.Appearance.Options.UseFont = true;
             this.btn_CancelLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelLaw.ImageOptions.Image")));
-            this.btn_CancelLaw.Location = new System.Drawing.Point(320, 7);
+            this.btn_CancelLaw.Location = new System.Drawing.Point(373, 9);
+            this.btn_CancelLaw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CancelLaw.Name = "btn_CancelLaw";
-            this.btn_CancelLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_CancelLaw.Size = new System.Drawing.Size(70, 30);
             this.btn_CancelLaw.TabIndex = 4;
             this.btn_CancelLaw.Text = "الغاء";
             this.btn_CancelLaw.Click += new System.EventHandler(this.btn_CancelLaw_Click);
@@ -803,9 +861,10 @@
             this.btn_DeleteLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_DeleteLaw.Appearance.Options.UseFont = true;
             this.btn_DeleteLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteLaw.ImageOptions.Image")));
-            this.btn_DeleteLaw.Location = new System.Drawing.Point(386, 7);
+            this.btn_DeleteLaw.Location = new System.Drawing.Point(450, 9);
+            this.btn_DeleteLaw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DeleteLaw.Name = "btn_DeleteLaw";
-            this.btn_DeleteLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_DeleteLaw.Size = new System.Drawing.Size(70, 30);
             this.btn_DeleteLaw.TabIndex = 5;
             this.btn_DeleteLaw.Text = "حذف";
             this.btn_DeleteLaw.Click += new System.EventHandler(this.btn_DeleteLaw_Click);
@@ -816,9 +875,10 @@
             this.btn_SaveLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_SaveLaw.Appearance.Options.UseFont = true;
             this.btn_SaveLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaveLaw.ImageOptions.Image")));
-            this.btn_SaveLaw.Location = new System.Drawing.Point(518, 7);
+            this.btn_SaveLaw.Location = new System.Drawing.Point(604, 9);
+            this.btn_SaveLaw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SaveLaw.Name = "btn_SaveLaw";
-            this.btn_SaveLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_SaveLaw.Size = new System.Drawing.Size(70, 30);
             this.btn_SaveLaw.TabIndex = 7;
             this.btn_SaveLaw.Text = "حفظ";
             this.btn_SaveLaw.Click += new System.EventHandler(this.btn_SaveLaw_Click);
@@ -829,24 +889,26 @@
             this.btn_EditeLaw.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.btn_EditeLaw.Appearance.Options.UseFont = true;
             this.btn_EditeLaw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditeLaw.ImageOptions.Image")));
-            this.btn_EditeLaw.Location = new System.Drawing.Point(452, 7);
+            this.btn_EditeLaw.Location = new System.Drawing.Point(527, 9);
+            this.btn_EditeLaw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_EditeLaw.Name = "btn_EditeLaw";
-            this.btn_EditeLaw.Size = new System.Drawing.Size(60, 23);
+            this.btn_EditeLaw.Size = new System.Drawing.Size(70, 30);
             this.btn_EditeLaw.TabIndex = 8;
             this.btn_EditeLaw.Text = "تعديل";
             this.btn_EditeLaw.Click += new System.EventHandler(this.btn_EditeLaw_Click);
             // 
             // frm_AddIssue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 612);
+            this.ClientSize = new System.Drawing.Size(1048, 800);
             this.Controls.Add(this.pnl_Lawbtn);
             this.Controls.Add(this.gb_LawDetails);
             this.Controls.Add(this.gb_Laws);
             this.Controls.Add(this.gb_Issue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Image = global::Official_Journal.Properties.Resources.Journal;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_AddIssue";

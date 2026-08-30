@@ -58,11 +58,11 @@ namespace Official_Journal
             if (spin_Year.Value > 0)
                 sql.Append(" AND [سنة العدد]=" + spin_Year.Value);
 
-            if (dtp_PubDate.Checked)
+            if (chk_dtp_Pub.Checked)
                 sql.Append(" AND CAST([تاريخ النشر] AS DATE)=CAST('" +
                            dtp_PubDate.Value.ToString("yyyy-MM-dd") + "' AS DATE)");
 
-            if (dtp_SaveDate.Checked)
+            if (chk_dtp_Save.Checked)
                 sql.Append(" AND CAST([تاريخ الحفظ] AS DATE)=CAST('" +
                            dtp_SaveDate.Value.ToString("yyyy-MM-dd") + "' AS DATE)");
 
@@ -96,13 +96,42 @@ namespace Official_Journal
                 byte[] PdfFile = (byte[])dt.Rows[0]["الملف"];
                 frm_PdfViewer frm = new frm_PdfViewer();
                 frm.pdfVie.LoadDocument(new MemoryStream(PdfFile));
-                frm.TopMost = true;
-                frm.Show();
-                frm.BringToFront();
+                //frm.TopMost = true;
+                frm.ShowDialog();
+                //frm.BringToFront();
                 frm.Text = dgv_Search.GetFocusedRowCellValue("كود العدد").ToString() ;
                 //
                 SplashScreenManager.CloseForm();
             }
+        }
+        //--------------------------------------------------------------------------
+        private void chk_dtp_Pub_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chk_dtp_Pub.Checked)
+            {
+                lbl_dtpPub.Enabled = false;
+                dtp_PubDate.Enabled = false;
+            }
+            else 
+            {
+                lbl_dtpPub.Enabled = true;
+                dtp_PubDate.Enabled = true;
+            }
+        }
+
+        private void chk_dtp_Save_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chk_dtp_Save.Checked)
+            {
+                lbl_dtpSave.Enabled = false;
+                dtp_SaveDate.Enabled = false;
+            }
+            else
+            {
+                lbl_dtpSave.Enabled = true;
+                dtp_SaveDate.Enabled = true;
+            }
+
         }
     }
 }

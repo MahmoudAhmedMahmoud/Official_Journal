@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pdfVie = new DevExpress.XtraPdfViewer.PdfViewer();
             this.SuspendLayout();
             // 
@@ -36,22 +35,24 @@
             // 
             this.pdfVie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfVie.Location = new System.Drawing.Point(0, 0);
+            this.pdfVie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pdfVie.Name = "pdfVie";
-            this.pdfVie.Size = new System.Drawing.Size(656, 629);
+            this.pdfVie.Size = new System.Drawing.Size(765, 823);
             this.pdfVie.TabIndex = 0;
             // 
             // frm_PdfViewer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 629);
+            this.ClientSize = new System.Drawing.Size(765, 823);
             this.Controls.Add(this.pdfVie);
             this.IconOptions.Image = global::Official_Journal.Properties.Resources.Journal;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_PdfViewer";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.frm_PdfViewer_Load);
             this.ResumeLayout(false);
 
         }

@@ -153,7 +153,9 @@ namespace Official_Journal
             {
                 frm_SearchAll frm = new frm_SearchAll();
                 //frm.MdiParent = this;
-                frm.ShowDialog();
+                frm.Show();
+                //frm.BringToFront();
+                frm.TopMost = true;
             }
             else
             {

@@ -81,7 +81,25 @@ namespace Official_Journal
         {
             ResetLawDetails();
             frm_Search frm = new frm_Search();
+            frm.Model = "Issue";
             frm.ShowDialog();
+
+        }
+
+        private void btn_SearchAuth_Click(object sender, EventArgs e)
+        {
+            frm_Search frm = new frm_Search();
+            frm.Model = "Auth";
+            frm.ShowDialog();
+
+        }
+
+        private void btn_SearchDep_Click(object sender, EventArgs e)
+        {
+            frm_Search frm = new frm_Search();
+            frm.Model = "Dep";
+            frm.ShowDialog();
+
         }
 
         private void btn_SaveIssue_Click(object sender, EventArgs e)
@@ -541,6 +559,10 @@ namespace Official_Journal
             return;
         }
 
-
+        private void btn_AddAuth_Click(object sender, EventArgs e)
+        {
+            frm_Add_IssuingAuthorities frm = new frm_Add_IssuingAuthorities();
+            frm.ShowDialog();
+        }
     }
 }

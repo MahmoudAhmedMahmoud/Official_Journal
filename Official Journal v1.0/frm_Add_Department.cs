@@ -149,7 +149,7 @@ namespace Official_Journal
             {
                 txt_ID.Text = dgv_Dep.GetFocusedRowCellValue("كود").ToString();
                 txt_Dep.Text = dgv_Dep.GetFocusedRowCellValue("الجهة المعنية").ToString();
-                txt_App_Pass.Text = dgv_Dep.GetFocusedRowCellValue("ملاحظات").ToString();
+                txt_App_Pass.Text = dgv_Dep.GetFocusedRowCellValue("كلمة المرور").ToString();
                 btn_Edite.Enabled = true;
                 btn_Delete.Enabled = true;
             }
