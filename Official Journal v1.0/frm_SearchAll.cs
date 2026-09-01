@@ -96,12 +96,13 @@ namespace Official_Journal
                 byte[] PdfFile = (byte[])dt.Rows[0]["الملف"];
                 frm_PdfViewer frm = new frm_PdfViewer();
                 frm.pdfVie.LoadDocument(new MemoryStream(PdfFile));
-                //frm.TopMost = true;
-                frm.ShowDialog();
+                frm.TopMost = true;
+                frm.Show();
+                SplashScreenManager.CloseForm();
                 //frm.BringToFront();
                 frm.Text = dgv_Search.GetFocusedRowCellValue("كود العدد").ToString() ;
                 //
-                SplashScreenManager.CloseForm();
+                
             }
         }
         //--------------------------------------------------------------------------

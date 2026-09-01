@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -153,15 +154,25 @@ namespace Official_Journal
             {
                 frm_SearchAll frm = new frm_SearchAll();
                 //frm.MdiParent = this;
-                frm.Show();
-                //frm.BringToFront();
-                frm.TopMost = true;
+                frm.ShowDialog();
             }
             else
             {
                 frm_SearchAll frm = new frm_SearchAll();
                 frm.BringToFront();
             }
+        }
+
+        private void btn_Laws_rpt_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rpt_LawRecords rpt = new rpt_LawRecords();
+            rpt.ShowPreviewDialog();
+        }
+
+        private void btn_LawsLetter_rpt_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rpt_LawsLetter rpt = new rpt_LawsLetter();
+            rpt.ShowPreviewDialog();
         }
     }
 }

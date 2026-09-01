@@ -38,6 +38,8 @@
             this.btn = new DevExpress.XtraBars.BarButtonItem();
             this.StaticItem_User = new DevExpress.XtraBars.BarStaticItem();
             this.btn_frmSearch = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Laws_rpt = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_LawsLetter_rpt = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -46,17 +48,14 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 39, 35, 39);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -69,19 +68,17 @@
             this.btn,
             this.StaticItem_User,
             this.btn_frmSearch,
-            this.barButtonItem1,
-            this.barButtonItem2});
+            this.btn_Laws_rpt,
+            this.btn_LawsLetter_rpt});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.PageHeaderItemLinks.Add(this.StaticItem_User);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3});
-            this.ribbonControl1.Size = new System.Drawing.Size(1373, 177);
+            this.ribbonControl1.Size = new System.Drawing.Size(1177, 140);
             // 
             // btn_frmUser
             // 
@@ -165,6 +162,24 @@
             this.btn_frmSearch.Name = "btn_frmSearch";
             this.btn_frmSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmSearch_ItemClick);
             // 
+            // btn_Laws_rpt
+            // 
+            this.btn_Laws_rpt.Caption = "سجل القوانين خلال فترة";
+            this.btn_Laws_rpt.Id = 9;
+            this.btn_Laws_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btn_Laws_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btn_Laws_rpt.Name = "btn_Laws_rpt";
+            this.btn_Laws_rpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Laws_rpt_ItemClick);
+            // 
+            // btn_LawsLetter_rpt
+            // 
+            this.btn_LawsLetter_rpt.Caption = "خطاب تسليم قوانين";
+            this.btn_LawsLetter_rpt.Id = 10;
+            this.btn_LawsLetter_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btn_LawsLetter_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btn_LawsLetter_rpt.Name = "btn_LawsLetter_rpt";
+            this.btn_LawsLetter_rpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_LawsLetter_rpt_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -218,51 +233,33 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_frmSearch);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btn_Laws_rpt);
+            this.ribbonPageGroup6.ItemLinks.Add(this.btn_LawsLetter_rpt);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Official_Journal.Properties.Resources.Official_Journal;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 177);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 140);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1373, 695);
+            this.pictureBox1.Size = new System.Drawing.Size(1177, 527);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "سجل القوانين خلال فترة";
-            this.barButtonItem1.Id = 9;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "خطاب تسليم قوانين";
-            this.barButtonItem2.Id = 10;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 872);
+            this.ClientSize = new System.Drawing.Size(1177, 667);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frm_Main.IconOptions.Image")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frm_Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -299,8 +296,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraBars.BarStaticItem StaticItem_User;
         private DevExpress.XtraBars.BarButtonItem btn_frmSearch;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btn_Laws_rpt;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btn_LawsLetter_rpt;
     }
 }

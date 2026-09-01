@@ -174,6 +174,12 @@
     <Compile Include="rpt_LawRecords.Designer.cs">
       <DependentUpon>rpt_LawRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="rpt_LawsLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_LawsLetter.Designer.cs">
+      <DependentUpon>rpt_LawsLetter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_AddIssue.resx">
       <DependentUpon>frm_AddIssue.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +235,9 @@
     </Compile>
     <EmbeddedResource Include="rpt_LawRecords.resx">
       <DependentUpon>rpt_LawRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_LawsLetter.resx">
+      <DependentUpon>rpt_LawsLetter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
