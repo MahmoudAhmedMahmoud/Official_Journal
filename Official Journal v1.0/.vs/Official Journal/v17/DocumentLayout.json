@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_add_department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_searchall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|e:\\work\\multimedia dep\\official journal\\official journal v1.0\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9BC6E6E4-DEE0-4A30-9ACD-6E0E87D12DE8}|Official Journal.csproj|solutionrelative:frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,25 +41,50 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 177,
+          "DockedWidth": 181,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "frm_Add_Department.cs",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Add_Department.cs",
+              "RelativeDocumentMoniker": "frm_Add_Department.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Add_Department.cs",
+              "RelativeToolTip": "frm_Add_Department.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T11:27:52.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_Add_Department.cs [Design]",
+              "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Add_Department.cs",
+              "RelativeDocumentMoniker": "frm_Add_Department.cs",
+              "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Add_Department.cs [Design]",
+              "RelativeToolTip": "frm_Add_Department.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T11:27:47.152Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "frm_SearchAll.cs",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_SearchAll.cs",
               "RelativeDocumentMoniker": "frm_SearchAll.cs",
               "ToolTip": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_SearchAll.cs",
               "RelativeToolTip": "frm_SearchAll.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-05T09:09:33.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "frm_SearchAll.cs [Design]",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_SearchAll.cs",
               "RelativeDocumentMoniker": "frm_SearchAll.cs",
@@ -64,12 +97,12 @@
           ]
         },
         {
-          "DockedWidth": 187,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 183,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "frm_Main.cs",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Main.cs",
               "RelativeDocumentMoniker": "frm_Main.cs",
@@ -82,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "frm_Main.cs [Design]",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_Main.cs",
               "RelativeDocumentMoniker": "frm_Main.cs",
@@ -94,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frm_UserHistory.cs",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_UserHistory.cs",
               "RelativeDocumentMoniker": "frm_UserHistory.cs",
@@ -107,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "frm_UserHistory.cs [Design]",
               "DocumentMoniker": "E:\\Work\\Multimedia Dep\\Official Journal\\Official Journal v1.0\\frm_UserHistory.cs",
               "RelativeDocumentMoniker": "frm_UserHistory.cs",
