@@ -168,6 +168,7 @@
             this.dgv_Dep.OptionsCustomization.AllowColumnMoving = false;
             this.dgv_Dep.OptionsCustomization.AllowGroup = false;
             this.dgv_Dep.OptionsFind.AlwaysVisible = true;
+            this.dgv_Dep.OptionsView.ShowGroupPanel = false;
             this.dgv_Dep.DoubleClick += new System.EventHandler(this.dgv_IssueAuth_DoubleClick);
             // 
             // panelControl1

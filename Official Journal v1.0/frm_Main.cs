@@ -174,5 +174,21 @@ namespace Official_Journal
             rpt_LawsLetter rpt = new rpt_LawsLetter();
             rpt.ShowPreviewDialog();
         }
+
+        private void btn_UserHistory_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var Open_frm = Application.OpenForms["frm_UserHistory"] as frm_UserHistory;
+            if (Open_frm == null)
+            {
+                frm_UserHistory frm = new frm_UserHistory();
+                //frm.MdiParent = this;
+                frm.ShowDialog();
+            }
+            else
+            {
+                frm_UserHistory frm = new frm_UserHistory();
+                frm.BringToFront();
+            }
+        }
     }
 }

@@ -42,21 +42,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.grid_User = new DevExpress.XtraGrid.GridControl();
+            this.dgv_Users = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Cancel = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Del = new DevExpress.XtraEditors.SimpleButton();
             this.btn_New = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Save = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Edite = new DevExpress.XtraEditors.SimpleButton();
-            this.grid_User = new DevExpress.XtraGrid.GridControl();
-            this.dgv_Users = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gb_AddFile)).BeginInit();
             this.gb_AddFile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_AddFile
@@ -209,6 +209,31 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "المستخدمين";
             // 
+            // grid_User
+            // 
+            this.grid_User.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_User.Location = new System.Drawing.Point(2, 22);
+            this.grid_User.MainView = this.dgv_Users;
+            this.grid_User.Name = "grid_User";
+            this.grid_User.Size = new System.Drawing.Size(763, 263);
+            this.grid_User.TabIndex = 0;
+            this.grid_User.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_Users});
+            // 
+            // dgv_Users
+            // 
+            this.dgv_Users.GridControl = this.grid_User;
+            this.dgv_Users.Name = "dgv_Users";
+            this.dgv_Users.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Users.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_Users.OptionsBehavior.Editable = false;
+            this.dgv_Users.OptionsFind.AlwaysVisible = true;
+            this.dgv_Users.OptionsLayout.Columns.AddNewColumns = false;
+            this.dgv_Users.OptionsLayout.Columns.RemoveOldColumns = false;
+            this.dgv_Users.OptionsLayout.StoreDataSettings = false;
+            this.dgv_Users.OptionsView.ShowGroupPanel = false;
+            this.dgv_Users.DoubleClick += new System.EventHandler(this.dgv_Users_DoubleClick);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btn_Cancel);
@@ -289,29 +314,6 @@
             this.btn_Edite.Text = "تعديل";
             this.btn_Edite.Click += new System.EventHandler(this.btn_Edite_Click);
             // 
-            // grid_User
-            // 
-            this.grid_User.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_User.Location = new System.Drawing.Point(2, 22);
-            this.grid_User.MainView = this.dgv_Users;
-            this.grid_User.Name = "grid_User";
-            this.grid_User.Size = new System.Drawing.Size(763, 263);
-            this.grid_User.TabIndex = 0;
-            this.grid_User.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgv_Users});
-            // 
-            // dgv_Users
-            // 
-            this.dgv_Users.GridControl = this.grid_User;
-            this.dgv_Users.Name = "dgv_Users";
-            this.dgv_Users.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-            this.dgv_Users.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-            this.dgv_Users.OptionsBehavior.Editable = false;
-            this.dgv_Users.OptionsLayout.Columns.AddNewColumns = false;
-            this.dgv_Users.OptionsLayout.Columns.RemoveOldColumns = false;
-            this.dgv_Users.OptionsLayout.StoreDataSettings = false;
-            this.dgv_Users.DoubleClick += new System.EventHandler(this.dgv_Users_DoubleClick);
-            // 
             // frm_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +322,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gb_AddFile);
+            this.IconOptions.Image = global::Official_Journal.Properties.Resources.Journal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Users";
@@ -333,9 +336,9 @@
             this.gb_AddFile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_User)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

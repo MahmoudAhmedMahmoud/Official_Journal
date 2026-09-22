@@ -72,8 +72,8 @@ namespace Official_Journal
                         frm.GetLaws();
                         frm.gb_Laws.Enabled = true;
                         //
-                        DataTable dt = ISS.GetIssueFile(dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString(), dgv_Search.GetFocusedRowCellValue("السنة").ToString());
-                        frm.IssueFile = (byte[])dt.Rows[0]["الملف"];
+                      ///  DataTable dt = ISS.GetIssueFile(dgv_Search.GetFocusedRowCellValue("رقم العدد").ToString(), dgv_Search.GetFocusedRowCellValue("السنة").ToString());
+                      ///  frm.IssueFile = (byte[])dt.Rows[0]["الملف"];
                         //
                         this.Close();
                     }

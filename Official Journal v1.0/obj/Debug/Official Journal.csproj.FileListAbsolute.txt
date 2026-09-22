@@ -429,3 +429,4 @@ E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\es\DevEx
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
 E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.rpt_LawsLetter.resources
+E:\Work\Multimedia Dep\Official Journal\Official Journal v1.0\obj\Debug\Official_Journal.frm_UserHistory.resources

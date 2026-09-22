@@ -1,5 +1,6 @@
 ﻿using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraEditors;
+using DevExpress.XtraLayout.Painting;
 using DevExpress.XtraPrinting.Export.Pdf;
 using System;
 using System.Collections.Generic;
@@ -134,6 +135,8 @@ namespace Official_Journal
                 }
                 else
                 {
+                    DataTable dt = ISS.GetIssueFile(txt_IssueID.Text,Spin_Year.Text);
+                    IssueFile = (byte[])dt.Rows[0]["الملف"];
                     DialogResult R=MSG.AskUpdateMessage();
                     if (R==DialogResult.Yes)
                     {
@@ -443,6 +446,7 @@ namespace Official_Journal
             btn_SaveIssue.Enabled = true;
             btn_CancelIssue.Enabled = true;
             btn_NewIssue.Enabled = false;
+            btn_DeleteIssue.Enabled = false;
             btn_SearchIssue.Enabled = false;
             gb_Laws.Enabled = false;
             gb_LawDetails.Enabled = false;
@@ -451,6 +455,7 @@ namespace Official_Journal
             dtp_PublishDate.Enabled = true;
             dtp_SaveDate.Enabled = true;
             btn_AddFile.Enabled = true;
+            ResetLawDetails();
         }
 
         //------------------Actions-------------------------
@@ -563,6 +568,23 @@ namespace Official_Journal
         {
             frm_Add_IssuingAuthorities frm = new frm_Add_IssuingAuthorities();
             frm.ShowDialog();
+        }
+
+        private void btn_CancelIssue_Click(object sender, EventArgs e)
+        {
+            btn_EditeIssue.Enabled = true;
+            btn_SaveIssue.Enabled = false;
+            btn_CancelIssue.Enabled = false;
+            btn_NewIssue.Enabled = true;
+            btn_DeleteIssue.Enabled = true;
+            btn_SearchIssue.Enabled = true;
+            gb_Laws.Enabled = true;
+           // gb_LawDetails.Enabled = false;
+            txt_IssueNo.Enabled = false;
+            Spin_Year.Enabled = false;
+            dtp_PublishDate.Enabled = false;
+            dtp_SaveDate.Enabled = false;
+            btn_AddFile.Enabled = false;
         }
     }
 }

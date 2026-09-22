@@ -35,7 +35,7 @@
             this.btn_frmIssuingAuth = new DevExpress.XtraBars.BarButtonItem();
             this.btn_frmAddIssue = new DevExpress.XtraBars.BarButtonItem();
             this.btn_frmPub = new DevExpress.XtraBars.BarButtonItem();
-            this.btn = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_UserHistory = new DevExpress.XtraBars.BarButtonItem();
             this.StaticItem_User = new DevExpress.XtraBars.BarStaticItem();
             this.btn_frmSearch = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Laws_rpt = new DevExpress.XtraBars.BarButtonItem();
@@ -65,7 +65,7 @@
             this.btn_frmIssuingAuth,
             this.btn_frmAddIssue,
             this.btn_frmPub,
-            this.btn,
+            this.btn_UserHistory,
             this.StaticItem_User,
             this.btn_frmSearch,
             this.btn_Laws_rpt,
@@ -136,13 +136,14 @@
             this.btn_frmPub.Name = "btn_frmPub";
             this.btn_frmPub.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_frmPub_ItemClick);
             // 
-            // btn
+            // btn_UserHistory
             // 
-            this.btn.Caption = "حركة المستخدمين";
-            this.btn.Id = 6;
-            this.btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.Image")));
-            this.btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.LargeImage")));
-            this.btn.Name = "btn";
+            this.btn_UserHistory.Caption = "حركة المستخدمين";
+            this.btn_UserHistory.Id = 6;
+            this.btn_UserHistory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.Image")));
+            this.btn_UserHistory.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn.ImageOptions.LargeImage")));
+            this.btn_UserHistory.Name = "btn_UserHistory";
+            this.btn_UserHistory.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_UserHistory_ItemClick);
             // 
             // StaticItem_User
             // 
@@ -166,8 +167,8 @@
             // 
             this.btn_Laws_rpt.Caption = "سجل القوانين خلال فترة";
             this.btn_Laws_rpt.Id = 9;
-            this.btn_Laws_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btn_Laws_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btn_Laws_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Laws_rpt.ImageOptions.Image")));
+            this.btn_Laws_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Laws_rpt.ImageOptions.LargeImage")));
             this.btn_Laws_rpt.Name = "btn_Laws_rpt";
             this.btn_Laws_rpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Laws_rpt_ItemClick);
             // 
@@ -175,8 +176,8 @@
             // 
             this.btn_LawsLetter_rpt.Caption = "خطاب تسليم قوانين";
             this.btn_LawsLetter_rpt.Id = 10;
-            this.btn_LawsLetter_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btn_LawsLetter_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btn_LawsLetter_rpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_LawsLetter_rpt.ImageOptions.Image")));
+            this.btn_LawsLetter_rpt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_LawsLetter_rpt.ImageOptions.LargeImage")));
             this.btn_LawsLetter_rpt.Name = "btn_LawsLetter_rpt";
             this.btn_LawsLetter_rpt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_LawsLetter_rpt_ItemClick);
             // 
@@ -229,7 +230,7 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btn);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_UserHistory);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_frmSearch);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -292,7 +293,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btn_frmPub;
-        private DevExpress.XtraBars.BarButtonItem btn;
+        private DevExpress.XtraBars.BarButtonItem btn_UserHistory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraBars.BarStaticItem StaticItem_User;
         private DevExpress.XtraBars.BarButtonItem btn_frmSearch;
