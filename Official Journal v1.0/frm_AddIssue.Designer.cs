@@ -571,6 +571,7 @@
             this.gb_Dep.Controls.Add(this.btn_SearchDep);
             this.gb_Dep.Controls.Add(this.btn_AddLawDep);
             this.gb_Dep.Controls.Add(this.cmb_Dep);
+            this.gb_Dep.Enabled = false;
             this.gb_Dep.Location = new System.Drawing.Point(12, 65);
             this.gb_Dep.Name = "gb_Dep";
             this.gb_Dep.Size = new System.Drawing.Size(434, 208);

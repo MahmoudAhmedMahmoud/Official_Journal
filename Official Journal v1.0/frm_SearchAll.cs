@@ -78,6 +78,11 @@ namespace Official_Journal
           //  MessageBox.Show(sql.ToString());
 
             grid_Search.DataSource = DAC.SelectQue(sql.ToString());
+            dgv_Search.Columns[11].Visible = false;
+            dgv_Search.Columns["الجهة المعنية"].BestFit();
+            dgv_Search.Columns["كود القانون"].BestFit();
+            dgv_Search.Columns["الجهة المصدرة"].BestFit();
+            dgv_Search.Columns["كود العدد"].BestFit();
         }
 
         //------------------------- btn ---------------------

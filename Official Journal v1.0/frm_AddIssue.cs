@@ -228,6 +228,7 @@ namespace Official_Journal
             dtp_PublishDate.Enabled = true;
             dtp_SaveDate.Enabled = true;
             btn_NewIssue.Enabled = false;
+            btn_AddFile.Enabled = true;
 
             //gb Law Details
 
