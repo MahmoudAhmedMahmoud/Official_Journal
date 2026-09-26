@@ -286,8 +286,6 @@ namespace Official_Journal
             {
                 return;
             }
-
-
         }
 
         private void btn_DelLawDep_Click(object sender, EventArgs e)
@@ -464,6 +462,7 @@ namespace Official_Journal
         {
             txt_IssueID.Text = "عدد " + txt_IssueNo.Text + " لسنة " + Spin_Year.Text;
         }
+
         private void Spin_Year_EditValueChanged(object sender, EventArgs e)
         {
             txt_IssueID.Text = "عدد " + txt_IssueNo.Text + " لسنة " + Spin_Year.Text;
@@ -512,7 +511,7 @@ namespace Official_Journal
             }
 
         }
-
+        
         private void dgv_Law_DoubleClick(object sender, EventArgs e)
         {
             if (dgv_Law.RowCount!=0)
@@ -548,7 +547,7 @@ namespace Official_Journal
                 }
 
                 //الجهة المعنية
-                DataTable dt = DAC.SelectQue("SELECT *  FROM VW_LawDep where [Law_No]='" + txt_LawNo.Text + "' and [Issue_No]='" + txt_IssueNo.Text + "' and [Issue_Year]='" + txt_Year.Text + "'");
+                DataTable dt = DAC.SelectQue("SELECT *  FROM VW_LawDep where [Law_No]=N'" + txt_LawNo.Text + "' and [Issue_No]=N'" + txt_IssueNo.Text + "' and [Issue_Year]=N'" + txt_Year.Text + "'");
                 dgv_LawDep.Rows.Clear();
                 foreach (DataRow row in dt.Rows)
                 {
@@ -560,7 +559,6 @@ namespace Official_Journal
                 // enable event check box
                 rb_Y.CheckedChanged += rb_Y_CheckedChanged;
                 rb_N.CheckedChanged += rb_N_CheckedChanged;
-
             }
             return;
         }
